@@ -1,5 +1,6 @@
 package Controladores;
 
+import Controladores.PestanasConPaneles.Asociaciones;
 import Controladores.PestanasConPaneles.Calendario;
 import Vistas.Login;
 import Vistas.Menu;
@@ -15,6 +16,7 @@ public class Mediator {
     Escritura escritura;
     Calendario calendario;
     Vistas.Perfil perfil;
+    Asociaciones asos;
     
     public Mediator(){
         escritura = new Escritura();
@@ -52,11 +54,41 @@ public class Mediator {
     }
     
     public void cambiaPestana(int pestana){
-        /*
-         * ya sabes aquí... y al final el panel.
-         * 
-         * 
-         */
+        switch(pestana){
+            case 1:aAsociaciones();
+            break;
+            case 2:aAvisos();
+            break;
+            case 3:aCalendario();
+            break;
+            case 4:aOrganizacion();
+            break;
+            case 5:aPoliticas();
+            break;
+            case 6:aVisualizacionDB();
+            break;
+            case 7:aSalidas();
+            break;
+        }
+    }
+    
+    private void aAsociaciones(){
+        if(asos== null){
+            asos = new Asociaciones(this);
+        }
+        menu.setCalendario(asos.prepararListas());
+    }
+    private void aAvisos(){
+    }
+    private void aCalendario(){
+    }
+    private void aOrganizacion(){
+    }
+    private void aPoliticas(){
+    }
+    private void aVisualizacionDB(){
+    }
+    private void aSalidas(){
     }
     
 }

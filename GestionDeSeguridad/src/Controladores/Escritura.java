@@ -4,6 +4,7 @@ import Modelos.EntityDB;
 import Modelos.LectorEscritorDeArbol;
 import Modelos.LectorEscritorDeEntidades;
 import Modelos.LectorEscritorValuadorDeRol;
+import Modelos.LogsRegister;
 
 /**
  *
@@ -13,12 +14,16 @@ public class Escritura {
     LectorEscritorValuadorDeRol rol;
     LectorEscritorDeEntidades enti;
     LectorEscritorDeArbol arbol;
+    LogsRegister logger;
     public Escritura(){
         rol = new LectorEscritorValuadorDeRol();
+        logger = new LogsRegister();
     }
     public boolean autenticar(String login, String password){
         rol = new LectorEscritorValuadorDeRol();
-        return rol.autenticar(login,password);
+        boolean logeo = rol.autenticar(login,password);
+        logger.logLoggin(login, password, logeo);
+        return logeo;
     }
     
     public void leerDatos(){
