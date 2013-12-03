@@ -1,5 +1,6 @@
 package Vistas;
 
+import Controladores.Mediator;
 import javax.swing.JPanel;
 
 /**
@@ -7,9 +8,14 @@ import javax.swing.JPanel;
  * @author Itzcoatl90
  */
 public class Menu extends javax.swing.JFrame {
+    Mediator m;
 
     public Menu() {
         initComponents();
+    }
+    
+    public void setMediator(Mediator m){
+        this.m = m;
     }
 
     public void setCalendario(JPanel calendario){
@@ -36,6 +42,12 @@ public class Menu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 450, Short.MAX_VALUE)
         );
+
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -71,6 +83,10 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        m.cambiaPestana(1);//Cambiar este int
+    }//GEN-LAST:event_jPanel2MouseClicked
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

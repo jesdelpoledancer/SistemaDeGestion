@@ -27,6 +27,7 @@ public class Mediator {
     public void autenticar(String login, String password){
         if(escritura.autenticar(login,password)){
             menu = new Menu();
+            menu.setMediator(this);
             calendario = new Calendario(this);
             this.login.setVisible(false);
             escritura.leerDatos();
@@ -37,7 +38,7 @@ public class Mediator {
         }
     }
     
-    public void changeCalendarPanel(JPanel panel){
+    public void changePanel(JPanel panel){
         menu.setCalendario(panel);
     }
     
@@ -45,8 +46,17 @@ public class Mediator {
         /*
          * Itzco, tu sabes tu chamba... este método es para todos tus compañeritos (riesgo, control, rol, Activo, etc etc).
          * Mostrar en perfil...
+         * * TIENES QUE CHECAR PRIVILEGIOS POR SI LA PETICION NO ES DEL CALENDARIO
          */
         perfil.show();
+    }
+    
+    public void cambiaPestana(int pestana){
+        /*
+         * ya sabes aquí... y al final el panel.
+         * 
+         * 
+         */
     }
     
 }

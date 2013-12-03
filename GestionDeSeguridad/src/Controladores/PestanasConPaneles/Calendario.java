@@ -112,7 +112,7 @@ public class Calendario {
          * }
          * 
          */
-        m.changeCalendarPanel(listaDePendientes);
+        m.changePanel(listaDePendientes);
     }
     
     public void mostrarPerfil(){
