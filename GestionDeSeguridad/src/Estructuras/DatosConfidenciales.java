@@ -17,4 +17,8 @@ public class DatosConfidenciales {
         this.password = password;
     }
     
+    public String getRol(){
+        return rol;
+    }
+    
 }

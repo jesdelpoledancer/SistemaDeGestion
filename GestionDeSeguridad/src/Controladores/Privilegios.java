@@ -7,6 +7,19 @@ import Estructuras.Rol;
  * @author Itzcoatl90
  */
 public class Privilegios {
+    
+    private Privilegios() {
+    }
+    
+    public static Privilegios getInstance() {
+        return PrivilegiosHolder.INSTANCE;
+    }
+    
+    private static class PrivilegiosHolder {
+
+        private static final Privilegios INSTANCE = new Privilegios();
+    }
+    
     public boolean ver(Rol rol,Object obj){
         /*
          * Este método revisa si el rol puede mirar el TIPO de objeto
