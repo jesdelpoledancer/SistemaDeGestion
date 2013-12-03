@@ -1,7 +1,7 @@
 package Estructuras;
 
-import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Control {
     private ArrayList riesgosAsociados;
-    private Time tiempoDeMonitoreo;
+    private Date tiempoDeMonitoreo;
     private String nombre;
     private ArrayList tareasARealizar;
 
@@ -21,11 +21,11 @@ public class Control {
         this.riesgosAsociados = riesgosAsociados;
     }
 
-    public Time getTiempoDeMonitoreo() {
+    public Date getTiempoDeMonitoreo() {
         return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
+    public void setTiempoDeMonitoreo(Date tiempoDeMonitoreo) {
         this.tiempoDeMonitoreo = tiempoDeMonitoreo;
     }
 

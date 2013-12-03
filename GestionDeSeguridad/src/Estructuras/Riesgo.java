@@ -1,6 +1,6 @@
 package Estructuras;
 
-import java.sql.Time;
+import java.util.Date;
 
 /**
  *
@@ -13,7 +13,7 @@ public class Riesgo {
     private int impacto;
     private int tratamiento;
     private int resultado;
-    private Time tiempoDeMonitoreo;
+    private Date tiempoDeMonitoreo;
 
     public String getAmenaza() {
         return amenaza;
@@ -63,11 +63,11 @@ public class Riesgo {
         this.resultado = resultado;
     }
 
-    public Time getTiempoDeMonitoreo() {
+    public Date getTiempoDeMonitoreo() {
         return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
+    public void setTiempoDeMonitoreo(Date tiempoDeMonitoreo) {
         this.tiempoDeMonitoreo = tiempoDeMonitoreo;
     }
     

@@ -1,7 +1,7 @@
 package Estructuras;
 
-import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Entidad_P {
     private String nombre;
     private String descripcion;
-    private Time tiempoDeRevision;
+    private Date tiempoDeRevision;
     private ArrayList controlesAsociados;
     private ArrayList activosAsociados;
     private Politica padre;
@@ -33,11 +33,11 @@ public class Entidad_P {
         this.descripcion = descripcion;
     }
 
-    public Time getTiempoDeRevision() {
+    public Date getTiempoDeRevision() {
         return tiempoDeRevision;
     }
 
-    public void setTiempoDeRevision(Time tiempoDeRevision) {
+    public void setTiempoDeRevision(Date tiempoDeRevision) {
         this.tiempoDeRevision = tiempoDeRevision;
     }
 
