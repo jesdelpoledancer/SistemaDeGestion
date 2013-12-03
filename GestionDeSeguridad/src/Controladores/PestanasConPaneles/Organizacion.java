@@ -12,7 +12,7 @@ public class Organizacion {
     Mediator m;
     public Organizacion(Mediator m){
         organigrama = new JPanel();
-        organigrama.setSize(520,450);
+        organigrama.setSize(580,450);
         this.m = m;
     }
     

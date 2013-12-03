@@ -12,7 +12,7 @@ public class VisualizacionDB {
     Mediator m;
     public VisualizacionDB(Mediator m){
         mapalogico = new JPanel();
-        mapalogico.setSize(520,450);
+        mapalogico.setSize(580,450);
         this.m = m;
     }
     

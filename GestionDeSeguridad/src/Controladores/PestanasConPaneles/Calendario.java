@@ -13,9 +13,9 @@ public class Calendario {
     Mediator m;
     public Calendario(Mediator m){
         calendario = new JPanel();
-        calendario.setSize(520,450);
+        calendario.setSize(580,450);
         listaDePendientes = new JPanel();
-        listaDePendientes.setSize(520,450);
+        listaDePendientes.setSize(580,450);
         this.m = m;
     }
     

@@ -12,7 +12,7 @@ public class Politicas {
     Mediator m;
     public Politicas(Mediator m){
         misionYPoliticas = new JPanel();
-        misionYPoliticas.setSize(520,450);
+        misionYPoliticas.setSize(580,450);
         this.m = m;
     }
     
