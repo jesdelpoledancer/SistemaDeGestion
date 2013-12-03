@@ -8,4 +8,13 @@ import java.util.ArrayList;
  */
 public class Politica extends Entidad_P {
     private ArrayList hijas;
+
+    public ArrayList getHijas() {
+        return hijas;
+    }
+
+    public void setHijas(ArrayList hijas) {
+        this.hijas = hijas;
+    }
+    
 }

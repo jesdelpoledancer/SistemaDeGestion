@@ -9,4 +9,12 @@ public class DatosConfidenciales {
     private String nombre;
     private String login;
     private String password;
+
+    public DatosConfidenciales(Rol rol, String nombre, String login, String password) {
+        this.rol = rol;
+        this.nombre = nombre;
+        this.login = login;
+        this.password = password;
+    }
+    
 }

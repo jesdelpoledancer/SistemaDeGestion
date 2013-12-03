@@ -1,5 +1,7 @@
 package gestiondeseguridad;
 
+import Controladores.Mediator;
+
 /**
  *
  * @author Itzcoatl90
@@ -11,5 +13,7 @@ public class GestionDeSeguridad {
         System.out.println("Probando GIT, linea agregada por Mario Sotelo.");
         System.out.println("Prueba Daniel Zam");
         System.out.println("Gio prueba ");
+        
+        Mediator m = new Mediator();
     }
 }
