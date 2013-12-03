@@ -14,10 +14,12 @@ public class Mediator {
     Menu menu;
     Escritura escritura;
     Calendario calendario;
+    Vistas.Perfil perfil;
     
     public Mediator(){
         escritura = new Escritura();
         login  = new Login();
+        perfil = new Vistas.Perfil();
         login.setMediator(this);
         login.show();
     }
@@ -37,6 +39,14 @@ public class Mediator {
     
     public void changeCalendarPanel(JPanel panel){
         menu.setCalendario(panel);
+    }
+    
+    public void mostrarPerfil(Object obj){
+        /*
+         * Itzco, tu sabes tu chamba... este método es para todos tus compañeritos (riesgo, control, rol, Activo, etc etc).
+         * Mostrar en perfil...
+         */
+        perfil.show();
     }
     
 }

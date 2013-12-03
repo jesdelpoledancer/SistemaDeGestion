@@ -115,4 +115,10 @@ public class Calendario {
         m.changeCalendarPanel(listaDePendientes);
     }
     
+    public void mostrarPerfil(){
+        /*
+         * Manda llamar el mostrarPerfil del Mediator (mandale tu entidad hecho objeto).
+         */
+    }
+    
 }
