@@ -8,19 +8,30 @@ import javax.swing.JPanel;
  * @author Itzcoatl90
  */
 public class VisualizacionDB {
-    JPanel mapalogico;
-    Mediator m;
+    private JPanel mapalogico;
+    private Mediator m;
+    private boolean init = true;
     public VisualizacionDB(Mediator m){
         mapalogico = new JPanel();
-        mapalogico.setSize(580,450);
+        mapalogico.setSize(595,489);
         this.m = m;
     }
+    private void changePanel(JPanel panel){
+        m.changePanel(5, panel);
+    }
     
-    public JPanel prepararMapa(){
+    public void init(){
+        if(init){
+            init =false;
+            prepararMapa();
+        }
+    }
+    
+    public void prepararMapa(){
         /*
-         * Aquí ya sabes
+         * Aquí ya sabes imprimir imagen y verse bonita nada mas
          */
-        return mapalogico;
+        changePanel(mapalogico);
     }
     
 }

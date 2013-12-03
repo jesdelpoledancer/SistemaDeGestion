@@ -1,15 +1,23 @@
 package Vistas;
 
+import Controladores.Mediator;
+
 /**
  *
  * @author Itzcoatl90
  */
 public class Perfil extends javax.swing.JFrame {
 
+    Mediator m;
+    
     public Perfil() {
         initComponents();
     }
 
+    public void setMediator(Mediator m){
+        this.m = m;
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

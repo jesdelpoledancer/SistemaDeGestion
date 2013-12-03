@@ -1,7 +1,12 @@
 package Controladores;
 
 import Controladores.PestanasConPaneles.Asociaciones;
+import Controladores.PestanasConPaneles.Avisos;
 import Controladores.PestanasConPaneles.Calendario;
+import Controladores.PestanasConPaneles.Organizacion;
+import Controladores.PestanasConPaneles.Politicas;
+import Controladores.PestanasConPaneles.Salidas;
+import Controladores.PestanasConPaneles.VisualizacionDB;
 import Vistas.Login;
 import Vistas.Menu;
 import javax.swing.JPanel;
@@ -11,37 +16,76 @@ import javax.swing.JPanel;
  * @author Itzcoatl90
  */
 public class Mediator {
-    Login login;
-    Menu menu;
-    Escritura escritura;
-    Calendario calendario;
-    Vistas.Perfil perfil;
-    Asociaciones asos;
+    
+    //Controladores hermanos
+    Escritura Control_escritura;
+    Perfil Control_perfil;
+    Privilegios Control_privilegio;
+    
+    //Controladores del paquete PestanasConPaneles
+    Asociaciones Controlador_asos;
+    Calendario Controlador_calendario;
+    Avisos Controlador_aviso;
+    Organizacion Controlador_organizacion;
+    Politicas Controlador_politicas;
+    VisualizacionDB Controlador_recursos;
+    Salidas Controlador_salida;
+    
+    //Vistas
+    Vistas.Perfil Vista_perfil;
+    Menu Vista_menu;
+    Login Vista_login;
     
     public Mediator(){
-        escritura = new Escritura();
-        login  = new Login();
-        perfil = new Vistas.Perfil();
-        login.setMediator(this);
-        login.show();
+        Control_escritura = new Escritura();
+        Vista_login  = new Login();
+        Vista_login.setMediator(this);
+        Vista_login.show();
     }
     
     public void autenticar(String login, String password){
-        if(escritura.autenticar(login,password)){
-            menu = new Menu();
-            menu.setMediator(this);
-            calendario = new Calendario(this);
-            this.login.setVisible(false);
-            escritura.leerDatos();
-            menu.setCalendario(calendario.prepararCalendario());
-            menu.show();
+        if(Control_escritura.autenticar(login,password)){
+            
+            //Controles hermanos
+            Control_perfil = new Perfil();
+            Control_privilegio = Privilegios.getInstance();
+            
+            //Controladores de pestañas
+            Controlador_asos = new Asociaciones(this);
+            Controlador_calendario = new Calendario(this);
+            Controlador_aviso = new Avisos(this);
+            Controlador_organizacion = new Organizacion(this);
+            Controlador_politicas = new Politicas(this);
+            Controlador_recursos = new VisualizacionDB(this);
+            Controlador_salida = new Salidas(this);
+            
+            //Vistas
+            Vista_perfil = new Vistas.Perfil();
+            Vista_menu = new Menu();
+            Vista_perfil.setMediator(this);
+            Vista_menu.setMediator(this);
+            
+            //Procedimiento
+            Control_escritura.leerDatos();
+            Controlador_asos.init();
+            Controlador_calendario.init();
+            Controlador_aviso.init();
+            Controlador_organizacion.init();
+            Controlador_politicas.init();
+            Controlador_recursos.init();
+            Controlador_salida.init();
+            
+            //Cambio de panel
+            this.Vista_login.setVisible(false);
+            Vista_menu.setVisible(true);
+        
         } else {
-            this.login.errorDeAuten();
+            this.Vista_login.errorDeAuten();
         }
     }
     
-    public void changePanel(JPanel panel){
-        menu.setCalendario(panel);
+    public void changePanel(int indice, JPanel panel){
+        Vista_menu.setCalendario(indice,panel);
     }
     
     public void mostrarPerfil(Object obj){
@@ -50,45 +94,7 @@ public class Mediator {
          * Mostrar en perfil...
          * * TIENES QUE CHECAR PRIVILEGIOS POR SI LA PETICION NO ES DEL CALENDARIO
          */
-        perfil.show();
-    }
-    
-    public void cambiaPestana(int pestana){
-        switch(pestana){
-            case 1:aAsociaciones();
-            break;
-            case 2:aAvisos();
-            break;
-            case 3:aCalendario();
-            break;
-            case 4:aOrganizacion();
-            break;
-            case 5:aPoliticas();
-            break;
-            case 6:aVisualizacionDB();
-            break;
-            case 7:aSalidas();
-            break;
-        }
-    }
-    
-    private void aAsociaciones(){
-        if(asos== null){
-            asos = new Asociaciones(this);
-        }
-        menu.setCalendario(asos.prepararListas());
-    }
-    private void aAvisos(){
-    }
-    private void aCalendario(){
-    }
-    private void aOrganizacion(){
-    }
-    private void aPoliticas(){
-    }
-    private void aVisualizacionDB(){
-    }
-    private void aSalidas(){
+        Vista_perfil.setVisible(true);
     }
     
 }

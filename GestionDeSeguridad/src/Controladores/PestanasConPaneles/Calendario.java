@@ -8,18 +8,30 @@ import javax.swing.JPanel;
  * @author Itzcoatl90
  */
 public class Calendario {
-    JPanel calendario;
-    JPanel listaDePendientes;
-    Mediator m;
+    private JPanel calendario;
+    private JPanel listaDePendientes;
+    private Mediator m;
+    private boolean init = true;
     public Calendario(Mediator m){
         calendario = new JPanel();
-        calendario.setSize(580,450);
+        calendario.setSize(595,489);
         listaDePendientes = new JPanel();
-        listaDePendientes.setSize(580,450);
+        listaDePendientes.setSize(595,489);
         this.m = m;
     }
     
-    public JPanel prepararCalendario(){
+    public void init(){
+        if(init){
+            init =false;
+            prepararCalendario();
+        }
+    }
+    
+    private void changePanel(JPanel panel){
+        m.changePanel(1, panel);
+    }
+    
+    public void prepararCalendario(){
         /*
          * En este método se busca en todas las entidades de EntityDB
          * los "tiempoDeMonitoreo". Se pone un señalizador en cada dia de la semana.
@@ -27,7 +39,7 @@ public class Calendario {
          * Puedes representar el calendario con imagenes o con panelsitos...
          * Si te sale otra idea de como representarlo está bien...
          * 
-         * Tienes todo el panel para ti solo... Solo no cambies el tamaño del panel (520*450)
+         * Tienes todo el panel para ti solo... Solo no cambies el tamaño del panel (595,489)
          * y si lo cambias me avisas para yo cambiar tu host de calendario.
          * 
          * EntityDB es un Singleton y la forma de llamarlo es por su método "getInstance()"
@@ -73,7 +85,7 @@ public class Calendario {
          * 
          * 
          */
-        return calendario;
+        changePanel(calendario);
     }
     
     public void metodosDeRespuesta(){
@@ -111,8 +123,12 @@ public class Calendario {
          *    //Mostrar en lista
          * }
          * 
+         * NOTA: TAMBIEN INCLUYE UN BOTON QUE TE REGRESE AL CALENDARIO (ya no necesitas recalcularlo)
+         * En el listener de este boton puedes mandar directamente un m.changePanel(1, calendario);
+         * puesto que ya está inicializado todo.
+         * 
          */
-        m.changePanel(listaDePendientes);
+        changePanel(listaDePendientes);
     }
     
     public void mostrarPerfil(){

@@ -8,15 +8,27 @@ import javax.swing.JPanel;
  * @author Itzcoatl90
  */
 public class Asociaciones {
-    JPanel listasDeAsociaciones;
-    Mediator m;
+    private JPanel listasDeAsociaciones;
+    private Mediator m;
+    private boolean init = true;
     public Asociaciones(Mediator m){
         listasDeAsociaciones = new JPanel();
-        listasDeAsociaciones.setSize(580,450);
+        listasDeAsociaciones.setSize(595,489);
         this.m = m;
     }
     
-    public JPanel prepararListas(){
+    private void changePanel(JPanel panel){
+        m.changePanel(4, panel);
+    }
+    
+    public void init(){
+        if(init){
+            init =false;
+            prepararListas();
+        }
+    }
+    
+    public void prepararListas(){
         /*
          * Este método prepara un panel con componentes de la GUI que puedan responder cada una de las señales
          * creo que funciona a la perfeccion la "List"... sino tal vez podría buscarse en internet que componente
@@ -49,6 +61,6 @@ public class Asociaciones {
          * Un evento en java es cualquier cosa que pueda ocurrir con un componente, como mousePressed, key released, etc...
          * 
          */
-        return listasDeAsociaciones;
+        changePanel(listasDeAsociaciones);
     }
 }
