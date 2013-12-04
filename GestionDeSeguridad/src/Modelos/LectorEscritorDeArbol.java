@@ -36,4 +36,11 @@ public class LectorEscritorDeArbol {
          * 
          */
     }
+    public boolean escribirArbol(){
+        /*
+         * En este método escribes lo que puedas leer directamente a un archivo (arbolP.sg)
+         * regresa true si lo lograste hacer... regresa false si hubo cualquier error.
+         */
+        return true;
+    }
 }

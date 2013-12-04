@@ -1,5 +1,6 @@
 package Estructuras;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -10,8 +11,11 @@ import java.util.Date;
 public class Activo {
     private ArrayList riesgos;
     private String nombre;
-    private double costo;
-    private Date tiempoDeMonitoreo;
+    private String costoModificacion;
+    private String costoInterrupcion;
+    private String costoRevelacion;
+    private Time tiempoDeMonitoreo;
+    private Date proximoMonitoreo;
     public ArrayList getRiesgos() {
         return riesgos;
     }
@@ -28,20 +32,44 @@ public class Activo {
         this.nombre = nombre;
     }
 
-    public double getCosto() {
-        return costo;
+    public String getCostoModificacion() {
+        return costoModificacion;
     }
 
-    public void setCosto(double costo) {
-        this.costo = costo;
+    public void setCostoModificacion(String costoModificacion) {
+        this.costoModificacion = costoModificacion;
     }
 
-    public Date getTiempoDeMonitoreo() {
+    public String getCostoInterrupcion() {
+        return costoInterrupcion;
+    }
+
+    public void setCostoInterrupcion(String costoInterrupcion) {
+        this.costoInterrupcion = costoInterrupcion;
+    }
+
+    public String getCostoRevelacion() {
+        return costoRevelacion;
+    }
+
+    public void setCostoRevelacion(String costoRevelacion) {
+        this.costoRevelacion = costoRevelacion;
+    }
+
+    public Time getTiempoDeMonitoreo() {
         return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeMonitoreo(Date tiempoDeMonitoreo) {
+    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
         this.tiempoDeMonitoreo = tiempoDeMonitoreo;
+    }
+
+    public Date getProximoMonitoreo() {
+        return proximoMonitoreo;
+    }
+
+    public void setProximoMonitoreo(Date proximoMonitoreo) {
+        this.proximoMonitoreo = proximoMonitoreo;
     }
    
 }

@@ -7,7 +7,7 @@ import javax.swing.JPanel;
  *
  * @author Itzcoatl90
  */
-public class Asociaciones {
+public class Asociaciones implements Pestana {
     private JPanel listasDeAsociaciones;
     private Mediator m;
     private boolean init = true;
@@ -21,14 +21,16 @@ public class Asociaciones {
         m.changePanel(4, panel);
     }
     
+    @Override
     public void init(){
         if(init){
             init =false;
-            prepararListas();
+            prepararPanel();
         }
     }
     
-    public void prepararListas(){
+    @Override
+    public void prepararPanel(){//Antes PrepararListas
         /*
          * Este método prepara un panel con componentes de la GUI que puedan responder cada una de las señales
          * creo que funciona a la perfeccion la "List"... sino tal vez podría buscarse en internet que componente
@@ -62,5 +64,10 @@ public class Asociaciones {
          * 
          */
         changePanel(listasDeAsociaciones);
+    }
+
+    @Override
+    public void mostrarPerfil(Object obj) {
+        m.mostrarPerfil(obj);
     }
 }

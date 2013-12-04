@@ -1,5 +1,6 @@
 package Estructuras;
 
+import java.sql.Time;
 import java.util.Date;
 
 /**
@@ -8,12 +9,14 @@ import java.util.Date;
  */
 public class Riesgo {
     private String amenaza;
-    private Activo activo;
     private int ocurrencia;
     private int impacto;
-    private int tratamiento;
-    private int resultado;
-    private Date tiempoDeMonitoreo;
+    private int riesgo;
+    private String tratamiento;
+    private String resultado;
+    private Time tiempoDeMonitoreo;
+    private Date proximoMonitoreo;
+    private String activo;
 
     public String getAmenaza() {
         return amenaza;
@@ -23,11 +26,11 @@ public class Riesgo {
         this.amenaza = amenaza;
     }
 
-    public Activo getActivo() {
+    public String getActivo() {
         return activo;
     }
 
-    public void setActivo(Activo activo) {
+    public void setActivo(String activo) {
         this.activo = activo;
     }
 
@@ -47,28 +50,44 @@ public class Riesgo {
         this.impacto = impacto;
     }
 
-    public int getTratamiento() {
+    public int getRiesgo() {
+        return riesgo;
+    }
+
+    public void setRiesgo(int riesgo) {
+        this.riesgo = riesgo;
+    }
+    
+    public String getTratamiento() {
         return tratamiento;
     }
 
-    public void setTratamiento(int tratamiento) {
+    public void setTratamiento(String tratamiento) {
         this.tratamiento = tratamiento;
     }
 
-    public int getResultado() {
+    public String getResultado() {
         return resultado;
     }
 
-    public void setResultado(int resultado) {
+    public void setResultado(String resultado) {
         this.resultado = resultado;
     }
 
-    public Date getTiempoDeMonitoreo() {
+    public Time getTiempoDeMonitoreo() {
         return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeMonitoreo(Date tiempoDeMonitoreo) {
+    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
         this.tiempoDeMonitoreo = tiempoDeMonitoreo;
+    }
+    
+    public Date getProximoMonitoreo() {
+        return proximoMonitoreo;
+    }
+
+    public void setProximoMonitoreo(Date proximoMonitoreo) {
+        this.proximoMonitoreo = proximoMonitoreo;
     }
     
 }

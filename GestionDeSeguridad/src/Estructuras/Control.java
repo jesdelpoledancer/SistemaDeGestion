@@ -1,5 +1,6 @@
 package Estructuras;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -8,9 +9,10 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class Control {
-    private ArrayList riesgosAsociados;
-    private Date tiempoDeMonitoreo;
     private String nombre;
+    private ArrayList riesgosAsociados;
+    private Time tiempoDeMonitoreo;
+    private Date proximoMonitoreo;
     private ArrayList tareasARealizar;
 
     public ArrayList getRiesgosAsociados() {
@@ -21,12 +23,20 @@ public class Control {
         this.riesgosAsociados = riesgosAsociados;
     }
 
-    public Date getTiempoDeMonitoreo() {
+    public Time getTiempoDeMonitoreo() {
         return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeMonitoreo(Date tiempoDeMonitoreo) {
+    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
         this.tiempoDeMonitoreo = tiempoDeMonitoreo;
+    }
+
+    public Date getProximoMonitoreo() {
+        return proximoMonitoreo;
+    }
+
+    public void setProximoMonitoreo(Date proximoMonitoreo) {
+        this.proximoMonitoreo = proximoMonitoreo;
     }
 
     public String getNombre() {

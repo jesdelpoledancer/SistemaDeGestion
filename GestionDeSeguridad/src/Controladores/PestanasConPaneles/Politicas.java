@@ -7,7 +7,7 @@ import javax.swing.JPanel;
  *
  * @author Itzcoatl90
  */
-public class Politicas {
+public class Politicas implements Pestana {
     private JPanel misionYPoliticas;
     private Mediator m;
     private boolean init = true;
@@ -17,10 +17,11 @@ public class Politicas {
         this.m = m;
     }
     
+    @Override
     public void init(){
         if(init){
             init =false;
-            prepararMapa();
+            prepararPanel();
         }
     }
     
@@ -28,10 +29,16 @@ public class Politicas {
         m.changePanel(3, panel);
     }
     
-    public void prepararMapa(){
+    @Override
+    public void prepararPanel(){
         /*
          * Aquí ya sabes imprimir imagen y calcular perfil politicas
          */
         changePanel(misionYPoliticas);
+    }
+
+    @Override
+    public void mostrarPerfil(Object obj) {
+        m.mostrarPerfil(obj);
     }
 }

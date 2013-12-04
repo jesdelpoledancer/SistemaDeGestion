@@ -7,7 +7,7 @@ import javax.swing.JPanel;
  *
  * @author Itzcoatl90
  */
-public class Organizacion {
+public class Organizacion implements Pestana {
     private JPanel organigrama;
     private Mediator m;
     private boolean init = true;
@@ -21,18 +21,25 @@ public class Organizacion {
         m.changePanel(2, panel);
     }
     
+    @Override
     public void init(){
         if(init){
             init =false;
-            prepararMapa();
+            prepararPanel();
         }
     }
     
-    public void prepararMapa(){
+    @Override
+    public void prepararPanel(){
         /*
          * Aquí ya sabes pintar imagen y medir los perfiles de roles
          */
         changePanel(organigrama);
+    }
+
+    @Override
+    public void mostrarPerfil(Object obj) {
+        m.mostrarPerfil(obj);
     }
     
 }

@@ -7,7 +7,7 @@ import javax.swing.JPanel;
  *
  * @author Itzcoatl90
  */
-public class Calendario {
+public class Calendario implements Pestana {
     private JPanel calendario;
     private JPanel listaDePendientes;
     private Mediator m;
@@ -20,10 +20,11 @@ public class Calendario {
         this.m = m;
     }
     
+    @Override
     public void init(){
         if(init){
             init =false;
-            prepararCalendario();
+            prepararPanel();
         }
     }
     
@@ -31,7 +32,8 @@ public class Calendario {
         m.changePanel(1, panel);
     }
     
-    public void prepararCalendario(){
+    @Override
+    public void prepararPanel(){
         /*
          * En este método se busca en todas las entidades de EntityDB
          * los "tiempoDeMonitoreo". Se pone un señalizador en cada dia de la semana.
@@ -131,10 +133,9 @@ public class Calendario {
         changePanel(listaDePendientes);
     }
     
-    public void mostrarPerfil(){
-        /*
-         * Manda llamar el mostrarPerfil del Mediator (mandale tu entidad hecho objeto).
-         */
+    @Override
+    public void mostrarPerfil(Object obj){
+        m.mostrarPerfil(obj);
     }
     
 }

@@ -6,9 +6,6 @@ package Modelos;
  */
 public class LectorEscritorDeEntidades {
     
-    public LectorEscritorDeEntidades(){
-    }
-    
     public void leerEntidadesDirectas(){
         /*
          * Lee desde archivo llamado "DirEnt.sg" las entidades:
@@ -52,6 +49,22 @@ public class LectorEscritorDeEntidades {
          * 
          * EntityDB entidad = EntityDB.getInstance();
          */
+    }
+    
+    public boolean escribirEntidadesDirectas(){
+        /*
+         * En este método escribes lo que puedas leer directamente a un archivo (DirEnt.sg)
+         * regresa true si lo lograste hacer... regresa false si hubo cualquier error.
+         */
+        return true;
+    }
+    
+    public boolean escribirEntidadesIndirectas(){
+        /*
+         * En este método escribes lo que puedas leer directamente a un archivo (IndEnt.sg)
+         * regresa true si lo lograste hacer... regresa false si hubo cualquier error.
+         */
+        return true;
     }
     
 }

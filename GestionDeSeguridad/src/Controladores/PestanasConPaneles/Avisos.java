@@ -7,7 +7,7 @@ import javax.swing.JPanel;
  *
  * @author Itzcoatl90
  */
-public class Avisos {
+public class Avisos implements Pestana {
     private Mediator m;
     private JPanel pizarra;
     private boolean init = true;
@@ -20,15 +20,22 @@ public class Avisos {
         m.changePanel(6, panel);
     }
     
+    @Override
     public void init(){
         if(init){
             init =false;
-            prepararAvisos();
+            prepararPanel();
         }
     }
     
-    public void prepararAvisos(){
+    @Override
+    public void prepararPanel(){
         changePanel(pizarra);
+    }
+
+    @Override
+    public void mostrarPerfil(Object obj) {
+        m.mostrarPerfil(obj);
     }
     
 }

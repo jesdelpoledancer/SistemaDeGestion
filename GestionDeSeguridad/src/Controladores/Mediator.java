@@ -7,6 +7,12 @@ import Controladores.PestanasConPaneles.Organizacion;
 import Controladores.PestanasConPaneles.Politicas;
 import Controladores.PestanasConPaneles.Salidas;
 import Controladores.PestanasConPaneles.VisualizacionDB;
+import Controladores.paneles.PerfilDeActivo;
+import Controladores.paneles.PerfilDeControl;
+import Controladores.paneles.PerfilDePlanDeSoporte;
+import Controladores.paneles.PerfilDeRiesgo;
+import Controladores.paneles.PerfilDeRol;
+import Controladores.paneles.Politica;
 import Vistas.Login;
 import Vistas.Menu;
 import javax.swing.JPanel;
@@ -35,6 +41,14 @@ public class Mediator {
     Vistas.Perfil Vista_perfil;
     Menu Vista_menu;
     Login Vista_login;
+    
+    //Perfiles
+    PerfilDeActivo ACTIVO;
+    PerfilDeControl CONTROL;
+    PerfilDePlanDeSoporte SOPORTE;
+    PerfilDeRiesgo RIESGO;
+    PerfilDeRol ROL;
+    Politica POLITICA;
     
     public Mediator(){
         Control_escritura = new Escritura();
@@ -89,11 +103,24 @@ public class Mediator {
     }
     
     public void mostrarPerfil(Object obj){
-        /*
-         * Itzco, tu sabes tu chamba... este método es para todos tus compañeritos (riesgo, control, rol, Activo, etc etc).
-         * Mostrar en perfil...
-         * * TIENES QUE CHECAR PRIVILEGIOS POR SI LA PETICION NO ES DEL CALENDARIO
-         */
+        if(obj instanceof Estructuras.Activo){
+            Estructuras.Activo puntero = (Estructuras.Activo)obj;
+        }
+        if(obj instanceof Estructuras.Control){
+            Estructuras.Control puntero = (Estructuras.Control)obj;
+        }
+        if(obj instanceof Estructuras.Entidad_P){
+            Estructuras.Entidad_P puntero = (Estructuras.Entidad_P)obj;
+        }
+        if(obj instanceof Estructuras.PlanDeSoporte){
+            Estructuras.PlanDeSoporte puntero = (Estructuras.PlanDeSoporte)obj;
+        }
+        if(obj instanceof Estructuras.Riesgo){
+            Estructuras.Riesgo puntero = (Estructuras.Riesgo)obj;
+        }
+        if(obj instanceof Estructuras.Rol){
+            Estructuras.Rol puntero = (Estructuras.Rol)obj;
+        }
         Vista_perfil.setVisible(true);
     }
     
