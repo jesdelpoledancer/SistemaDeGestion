@@ -1,5 +1,6 @@
 package Estructuras;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,10 +8,11 @@ import java.util.Date;
  *
  * @author Itzcoatl90
  */
-public class Entidad_P {
+public abstract class Entidad_P {
     private String nombre;
     private String descripcion;
-    private Date tiempoDeRevision;
+    private Time tiempoDeMonitoreo;
+    private Date proximoMonitoreo;
     private ArrayList controlesAsociados;
     private ArrayList activosAsociados;
     private Politica padre;
@@ -20,6 +22,8 @@ public class Entidad_P {
     public String getNombre() {
         return nombre;
     }
+    
+    public abstract Object[] getNombreHijas();
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -33,13 +37,23 @@ public class Entidad_P {
         this.descripcion = descripcion;
     }
 
-    public Date getTiempoDeRevision() {
-        return tiempoDeRevision;
+    public Time getTiempoDeMonitoreo() {
+        return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeRevision(Date tiempoDeRevision) {
-        this.tiempoDeRevision = tiempoDeRevision;
+    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
+        this.tiempoDeMonitoreo = tiempoDeMonitoreo;
     }
+
+    public Date getProximoMonitoreo() {
+        return proximoMonitoreo;
+    }
+
+    public void setProximoMonitoreo(Date proximoMonitoreo) {
+        this.proximoMonitoreo = proximoMonitoreo;
+    }
+
+    
 
     public ArrayList getControlesAsociados() {
         return controlesAsociados;

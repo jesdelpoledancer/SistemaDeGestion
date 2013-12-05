@@ -9,6 +9,35 @@ public class PerfilDeControl extends javax.swing.JPanel {
     public PerfilDeControl() {
         initComponents();
     }
+    
+    public void setNombre(String nombre){
+        jTextField1.setText(nombre);
+    }
+    public void setNombreEnabled(boolean in){
+        jTextField1.setEditable(in);
+    }
+    
+    public void setTiempoMon(String tiempoMon){
+        jTextField2.setText(tiempoMon);
+    }
+    public void setTiempoMonEnabled(boolean in){
+        jTextField2.setEditable(in);
+    }
+    
+    public void setProximaMon(String proximaMon){
+        jTextField3.setText(proximaMon);
+    }
+    public void setProximaMonEnabled(boolean in){
+        jTextField3.setEditable(in);
+    }
+    
+    public void setRiesgos(Object[] riesgos){
+        jList1.setListData(riesgos);
+    }
+    
+    public void setTareas(Object[] tareas){
+        jList2.setListData(tareas);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

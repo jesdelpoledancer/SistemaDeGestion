@@ -30,7 +30,7 @@ public class Asociaciones implements Pestana {
     }
     
     @Override
-    public void prepararPanel(){//Antes PrepararListas
+    public void prepararPanel(){
         /*
          * Este método prepara un panel con componentes de la GUI que puedan responder cada una de las señales
          * creo que funciona a la perfeccion la "List"... sino tal vez podría buscarse en internet que componente

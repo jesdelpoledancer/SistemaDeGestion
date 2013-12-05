@@ -9,6 +9,69 @@ public class PerfilDeRiesgo extends javax.swing.JPanel {
     public PerfilDeRiesgo() {
         initComponents();
     }
+    
+    public void setAmenaza(String nombre){
+        jTextField1.setText(nombre);
+    }
+    public void setAmenazaEnabled(boolean in){
+        jTextField1.setEditable(in);
+    }
+    
+    public void setOcurrencia(String ocurrencia){
+        jTextField2.setText(ocurrencia);
+    }
+    public void setOcurrenciaEnabled(boolean in){
+        jTextField2.setEditable(in);
+    }
+    
+    public void setImpacto(String impacto){
+        jTextField3.setText(impacto);
+    }
+    public void setImpactoEnabled(boolean in){
+        jTextField3.setEditable(in);
+    }
+    
+    public void setTratamiento(String tratamiento){
+        jTextField4.setText(tratamiento);
+    }
+    public void setTratamientoEnabled(boolean in){
+        jTextField4.setEditable(in);
+    }
+    
+    public void setRiesgo(String riesgo){
+        jTextField5.setText(riesgo);
+    }
+    public void setRiesgoEnabled(boolean in){
+        jTextField5.setEditable(in);
+    }
+    
+    public void setResultado(String resultado){
+        jTextField6.setText(resultado);
+    }
+    public void setResultadoEnabled(boolean in){
+        jTextField6.setEditable(in);
+    }
+    
+    public void setTiempoMon(String tiempo){
+        jTextField7.setText(tiempo);
+    }
+    public void setTiempoMonEnabled(boolean in){
+        jTextField7.setEditable(in);
+    }
+    
+    public void setProximoMon(String tiempo){
+        jTextField8.setText(tiempo);
+    }
+    public void setProximoMonEnabled(boolean in){
+        jTextField8.setEditable(in);
+    }
+    
+    public void setActivo(String activo){
+        jTextField9.setText(activo);
+    }
+    public void setActivoEnabled(boolean in){
+        jTextField9.setEditable(in);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

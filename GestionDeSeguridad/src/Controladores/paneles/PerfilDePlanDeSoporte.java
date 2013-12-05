@@ -9,6 +9,42 @@ public class PerfilDePlanDeSoporte extends javax.swing.JPanel {
     public PerfilDePlanDeSoporte() {
         initComponents();
     }
+    
+    public void setNombre(String nombre){
+        jTextField1.setText(nombre);
+    }
+    public void setNombreEnabled(boolean in){
+        jTextField1.setEditable(in);
+    }
+    
+    public void setTiempoMon(String tiempoMon){
+        jTextField2.setText(tiempoMon);
+    }
+    public void setTiempoMonEnabled(boolean in){
+        jTextField2.setEditable(in);
+    }
+    
+    public void setProximoMon(String proximaMon){
+        jTextField3.setText(proximaMon);
+    }
+    public void setProximoMonEnabled(boolean in){
+        jTextField3.setEditable(in);
+    }
+    
+    public void setDescripcion(String descripcion){
+        jTextArea1.setText(descripcion);
+    }
+    public void setDescripcionEnabled(boolean in){
+        jTextArea1.setEditable(in);
+    }
+    
+    public void setPoliticas(Object[] obj){
+        jList1.setListData(obj);
+    }
+    
+    public void setTareas(Object[] obj){
+        jList2.setListData(obj);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

@@ -1,5 +1,6 @@
 package Estructuras;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,7 +13,8 @@ public class PlanDeSoporte {
     private String descripcion;
     private ArrayList PoliticasQueSoporta;
     private ArrayList TareasARealizar;
-    private Date tiempoDeMonitoreo;
+    private Time tiempoDeMonitoreo;
+    private Date proximoMonitoreo;
 
     public void agregarPolitica(Entidad_P in){
         /*
@@ -52,12 +54,20 @@ public class PlanDeSoporte {
         this.TareasARealizar = TareasARealizar;
     }
 
-    public Date getTiempoDeMonitoreo() {
+    public Time getTiempoDeMonitoreo() {
         return tiempoDeMonitoreo;
     }
 
-    public void setTiempoDeMonitoreo(Date tiempoDeMonitoreo) {
+    public void setTiempoDeMonitoreo(Time tiempoDeMonitoreo) {
         this.tiempoDeMonitoreo = tiempoDeMonitoreo;
+    }
+
+    public Date getProximoMonitoreo() {
+        return proximoMonitoreo;
+    }
+
+    public void setProximoMonitoreo(Date proximoMonitoreo) {
+        this.proximoMonitoreo = proximoMonitoreo;
     }
     
 }

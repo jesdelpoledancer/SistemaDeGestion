@@ -6,10 +6,58 @@ package Controladores.paneles;
  */
 public class PerfilDeActivo extends javax.swing.JPanel {
 
+    private boolean look;
+    
     public PerfilDeActivo() {
         initComponents();
     }
-
+    
+    public void setNombre(String nombre){
+        jTextField1.setText(nombre);
+    }
+    public void setNombreEnabled(boolean in){
+        jTextField1.setEditable(in);
+    }
+    
+    public void setCostoModif(String costoModif){
+        jTextField2.setText(costoModif);
+    }
+    public void setCostoModifEnabled(boolean in){
+        jTextField2.setEditable(in);
+    }
+    
+    public void setCostoInt(String costoInt){
+        jTextField3.setText(costoInt);
+    }
+    public void setCostoIntEnabled(boolean in){
+        jTextField3.setEditable(in);
+    }
+    
+    public void setCostoRev(String costoRev){
+        jTextField4.setText(costoRev);
+    }
+    public void setCostoRevEnabled(boolean in){
+        jTextField4.setEditable(in);
+    }
+    
+    public void setTiempoMon(String tiempoMon){
+        jTextField5.setText(tiempoMon);
+    }
+    public void setTiempoMonEnabled(boolean in){
+        jTextField5.setEditable(in);
+    }
+    
+    public void setProximaMon(String proximaMon){
+        jTextField6.setText(proximaMon);
+    }
+    public void setProximaMonEnabled(boolean in){
+        jTextField6.setEditable(in);
+    }
+    
+    public void setRiesgos(Object[] riesgos){
+        jList1.setListData(riesgos);
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -62,6 +110,11 @@ public class PerfilDeActivo extends javax.swing.JPanel {
 
         jTextField2.setEditable(false);
         jTextField2.setText("8000.00");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Costo por interrupcion (servicio, por hora)");
 
@@ -77,11 +130,21 @@ public class PerfilDeActivo extends javax.swing.JPanel {
 
         jTextField4.setEditable(false);
         jTextField4.setText("Reputacion");
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Tiempo de Monitoreo");
 
         jTextField5.setEditable(false);
         jTextField5.setText("30 dias");
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Próximo monitoreo");
 
@@ -194,6 +257,18 @@ public class PerfilDeActivo extends javax.swing.JPanel {
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

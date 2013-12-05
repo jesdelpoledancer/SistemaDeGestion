@@ -16,5 +16,14 @@ public class Politica extends Entidad_P {
     public void setHijas(ArrayList hijas) {
         this.hijas = hijas;
     }
+
+    @Override
+    public Object[] getNombreHijas() {
+        Object[] salida = new Object[hijas.size()];
+        for (int i = 0; i < salida.length; i++) {
+            salida[i] = ((Entidad_P)hijas.get(i)).getNombre();
+        }
+        return salida;
+    }
     
 }

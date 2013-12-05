@@ -9,6 +9,67 @@ public class Politica extends javax.swing.JPanel {
     public Politica() {
         initComponents();
     }
+    
+    public void setNombre(String nombre){
+        jTextField1.setText(nombre);
+    }
+    public void setNombreEnable(boolean in){
+        jTextField1.setEditable(in);
+    }
+    
+    public void setTiempoMon(String nombre){
+        jTextField2.setText(nombre);
+    }
+    public void setTiempoMonEnable(boolean in){
+        jTextField2.setEditable(in);
+    }
+    
+    public void setProximoMon(String nombre){
+        jTextField3.setText(nombre);
+    }
+    public void setProximoMonEnable(boolean in){
+        jTextField3.setEditable(in);
+    }
+    
+    public void setDescripcion(String nombre){
+        jTextField4.setText(nombre);
+    }
+    public void setDescripcionEnable(boolean in){
+        jTextField4.setEditable(in);
+    }
+    
+    public void setResponsable(String nombre){
+        jTextField5.setText(nombre);
+    }
+    public void setResponsableEnable(boolean in){
+        jTextField5.setEditable(in);
+    }
+    
+    public void setEstado(String nombre){
+        jTextField6.setText(nombre);
+    }
+    public void setEstadoEnable(boolean in){
+        jTextField6.setEditable(in);
+    }
+    
+    public void setPadre(String nombre){
+        jTextField7.setText(nombre);
+    }
+    public void setPadreEnable(boolean in){
+        jTextField7.setEditable(in);
+    }
+    
+    public void setControles(Object[] controles){
+        jList2.setListData(controles);
+    }
+    
+    public void setActivos(Object[] activos){
+        jList3.setListData(activos);
+    }
+    
+    public void setHijas(Object[] hijas){
+        jList1.setListData(hijas);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
