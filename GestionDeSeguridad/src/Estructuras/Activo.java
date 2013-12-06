@@ -10,12 +10,12 @@ import java.util.Date;
  */
 public class Activo {
     private ArrayList riesgos;
-    private String nombre;
-    private String costoModificacion;
-    private String costoInterrupcion;
-    private String costoRevelacion;
-    private Time tiempoDeMonitoreo;
-    private Date proximoMonitoreo;
+    private String nombre;//1
+    private String costoModificacion;//2
+    private String costoInterrupcion;//3
+    private String costoRevelacion;//4
+    private Time tiempoDeMonitoreo;//5
+    private Date proximoMonitoreo;//6
     public ArrayList getRiesgos() {
         return riesgos;
     }

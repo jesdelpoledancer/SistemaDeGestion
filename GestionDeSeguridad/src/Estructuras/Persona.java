@@ -5,7 +5,7 @@ package Estructuras;
  * @author Itzcoatl90
  */
 public class Persona {
-    private DatosConfidenciales info;
+    private DatosConfidenciales info;//1
 
     public Persona(String rol, String nombre, String login, String password) {
         info = new DatosConfidenciales(rol,nombre,login,password);

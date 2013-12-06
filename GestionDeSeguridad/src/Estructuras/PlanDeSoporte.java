@@ -9,12 +9,12 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class PlanDeSoporte {
-    private String nombre;
-    private String descripcion;
-    private ArrayList PoliticasQueSoporta;
-    private ArrayList TareasARealizar;
-    private Time tiempoDeMonitoreo;
-    private Date proximoMonitoreo;
+    private String nombre;//1
+    private String descripcion;//2
+    private ArrayList PoliticasQueSoporta;//3
+    private ArrayList TareasARealizar;//4
+    private Time tiempoDeMonitoreo;//5
+    private Date proximoMonitoreo;//6
 
     public void agregarPolitica(Entidad_P in){
         /*
