@@ -5,8 +5,8 @@ package Estructuras;
  * @author Itzcoatl90
  */
 public class Tarea {
-    private String nombre;
-    private String descripcion;
+    private String nombre;//1
+    private String descripcion;//2
 
     public String getNombre() {
         return nombre;

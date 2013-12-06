@@ -9,11 +9,11 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class Control {
-    private String nombre;
-    private ArrayList riesgosAsociados;
-    private Time tiempoDeMonitoreo;
-    private Date proximoMonitoreo;
-    private ArrayList tareasARealizar;
+    private String nombre;//1
+    private ArrayList riesgosAsociados;//2
+    private Time tiempoDeMonitoreo;//3
+    private Date proximoMonitoreo;//4
+    private ArrayList tareasARealizar;//5
 
     public ArrayList getRiesgosAsociados() {
         return riesgosAsociados;

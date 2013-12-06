@@ -8,10 +8,10 @@ import java.util.HashMap;
  * @author Itzcoatl90
  */
 public class Rol {
-    private String nombre;
-    private DiccionarioDePrivilegios diccionario;
-    private HashMap privilegios;
-    private ArrayList usuarios;
+    private String nombre;//1
+    private DiccionarioDePrivilegios diccionario;//2
+    private HashMap privilegios;//3
+    private ArrayList usuarios;//4
 
     public String getNombre() {
         return nombre;

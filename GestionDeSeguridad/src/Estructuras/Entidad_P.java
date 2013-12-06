@@ -9,15 +9,15 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public abstract class Entidad_P {
-    private String nombre;
-    private String descripcion;
-    private Time tiempoDeMonitoreo;
-    private Date proximoMonitoreo;
-    private ArrayList controlesAsociados;
-    private ArrayList activosAsociados;
-    private Politica padre;
-    private Rol responsable;
-    private String estado;
+    private String nombre;//1
+    private String descripcion;//2
+    private Time tiempoDeMonitoreo;//3
+    private Date proximoMonitoreo;//4
+    private ArrayList controlesAsociados;//5
+    private ArrayList activosAsociados;//6
+    private Politica padre;//7
+    private Rol responsable;//8
+    private String estado;//9
 
     public String getNombre() {
         return nombre;
