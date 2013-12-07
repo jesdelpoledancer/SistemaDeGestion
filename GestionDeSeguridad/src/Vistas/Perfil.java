@@ -1,6 +1,7 @@
 package Vistas;
 
 import Controladores.Mediator;
+import java.awt.BorderLayout;
 
 /**
  *
@@ -21,6 +22,10 @@ public class Perfil extends javax.swing.JFrame {
     public void change(javax.swing.JPanel n){
         jPanel1.removeAll();
         jPanel1.add(n);
+        n.setBounds(0,0,jPanel1.getWidth(),jPanel1.getHeight());
+        System.out.println("jPanel1:"+jPanel1.getHeight()+","+jPanel1.getWidth()+"<|>"+n.getHeight()+","+n.getWidth());
+        this.pack();
+        this.repaint();
     }
     
     @SuppressWarnings("unchecked")

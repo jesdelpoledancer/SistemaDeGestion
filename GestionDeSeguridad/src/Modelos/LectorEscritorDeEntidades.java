@@ -14,13 +14,13 @@ import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
-import org.jespxml.JespXML;
-import org.jespxml.excepciones.TagHijoNotFoundException;
-import org.jespxml.modelo.Atributo;
-import org.jespxml.modelo.Comentario;
-import org.jespxml.modelo.Encoding;
-import org.jespxml.modelo.Tag;
-import org.xml.sax.SAXException;
+//import org.jespxml.JespXML;
+//import org.jespxml.excepciones.TagHijoNotFoundException;
+//import org.jespxml.modelo.Atributo;
+//import org.jespxml.modelo.Comentario;
+//import org.jespxml.modelo.Encoding;
+//import org.jespxml.modelo.Tag;
+//import org.xml.sax.SAXException;
 
 /**
  *
@@ -46,6 +46,9 @@ public class LectorEscritorDeEntidades {
          * 
          * EntityDB entidad = EntityDB.getInstance();
          */
+        
+        /*
+        
         EntityDB db=EntityDB.getInstance();
         JespXML xml1= new JespXML(new File("DirEnt.sg"));
         try {
@@ -87,7 +90,7 @@ public class LectorEscritorDeEntidades {
         
         
         
-        
+        */
     }
     
     public void leerEntidadesIndirectas(){
@@ -122,6 +125,8 @@ public class LectorEscritorDeEntidades {
          * En este método escribes lo que puedas leer directamente a un archivo (DirEnt.sg)
          * regresa true si lo lograste hacer... regresa false si hubo cualquier error.
          */
+        
+        /*
         EntityDB db=EntityDB.getInstance();
         Tag raiz= new Tag("entidades");
         raiz.addAtributo(new Atributo("ultimaActualizacion",new Date().toLocaleString()));
@@ -203,6 +208,8 @@ public class LectorEscritorDeEntidades {
             Logger.getLogger(LectorEscritorDeEntidades.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
+        * * 
+        * */
         return true;
     }
     

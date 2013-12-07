@@ -32,14 +32,14 @@ public class Escritura {
     }
     
     public void leerDatos(){
-        enti = new LectorEscritorDeEntidades();
+        //enti = new LectorEscritorDeEntidades();
         arbol = new LectorEscritorDeArbol();
         memento = new LectorEscritorDeMementos();
         privilegio = new LectorEscritorDePrivilegios();
         reportero = new Reporter();
         rol.leerRoles();
-        enti.leerEntidadesDirectas();
-        enti.leerEntidadesIndirectas();
+        //enti.leerEntidadesDirectas();
+        //enti.leerEntidadesIndirectas();
         arbol.leerArbol();
     }
 }

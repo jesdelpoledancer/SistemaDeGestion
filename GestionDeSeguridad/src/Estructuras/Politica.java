@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Itzcoatl90
  */
 public class Politica extends Entidad_P {
-    private ArrayList hijas;//1
+    private ArrayList hijas;
 
     public ArrayList getHijas() {
         return hijas;

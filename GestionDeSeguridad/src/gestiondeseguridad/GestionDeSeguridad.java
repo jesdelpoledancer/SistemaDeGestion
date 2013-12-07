@@ -16,11 +16,18 @@ import java.util.Date;
 public class GestionDeSeguridad {
 
     public static void main(String[] args) {
+        Mediator m = new Mediator();
+    }
+    
+    public static void imprimirPruebasDeQueTodosUsamosGitHub(){
         System.out.println("Hola mundo! Ahora a disfrutar de este espacio virtual.");
         System.out.println("Probando GIT, linea agregada por Mario Sotelo.");
         System.out.println("Prueba Daniel Zam");
         System.out.println("Gio prueba ");
         System.out.println("ya esta prueba Joel ");
+    }
+    
+    public static void pruebasLectura(){
         /*
          * Pruebas Lectura y escritura
          * Escritura
@@ -68,6 +75,8 @@ public class GestionDeSeguridad {
          * Pruebas Lectura y escritura
          * Lectura
         */
+        
+        /*
         LectorEscritorDeEntidades l= new LectorEscritorDeEntidades();
        l.leerEntidadesDirectas();
        EntityDB db=EntityDB.getInstance();
@@ -80,8 +89,6 @@ public class GestionDeSeguridad {
             for (Object e : tt) {
                 Tarea r=(Tarea)e;
                 System.out.println("Tarea:"+r.getNombre()+" Descripcion: "+r.getDescripcion());
-            }
-       
-        Mediator m = new Mediator();
+            }*/
     }
 }

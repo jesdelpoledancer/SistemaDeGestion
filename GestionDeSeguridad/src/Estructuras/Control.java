@@ -10,10 +10,10 @@ import java.util.Date;
  */
 public class Control {
     private String nombre;//1
-    private ArrayList riesgosAsociados;//2
+    private ArrayList riesgosAsociados;//2 (para agregar un riesgo a la lista) 6 (para quitar un riesgo)
     private Time tiempoDeMonitoreo;//3
     private Date proximoMonitoreo;//4
-    private ArrayList tareasARealizar;//5
+    private ArrayList tareasARealizar;//5 (para agregar una tarea) y 7 (para quitar una tarea)
 
     public ArrayList getRiesgosAsociados() {
         return riesgosAsociados;

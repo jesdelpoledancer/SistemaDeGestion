@@ -10,8 +10,8 @@ import java.util.HashMap;
 public class Rol {
     private String nombre;//1
     private DiccionarioDePrivilegios diccionario;//2
-    private HashMap privilegios;//3
-    private ArrayList usuarios;//4
+    private HashMap privilegios;//3 (para agregar privilegios) y 5 (para quitar privilegios)
+    private ArrayList usuarios;//4 (para agregar usuarios) y 6 (para quitar usuarios)
 
     public String getNombre() {
         return nombre;

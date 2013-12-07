@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class Activo {
-    private ArrayList riesgos;
+    private ArrayList riesgos;//7 (para agregar riesgo) y 8 (para quitar un riesgo)
     private String nombre;//1
     private String costoModificacion;//2
     private String costoInterrupcion;//3

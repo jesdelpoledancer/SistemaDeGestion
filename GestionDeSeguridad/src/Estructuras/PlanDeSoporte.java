@@ -11,8 +11,8 @@ import java.util.Date;
 public class PlanDeSoporte {
     private String nombre;//1
     private String descripcion;//2
-    private ArrayList PoliticasQueSoporta;//3
-    private ArrayList TareasARealizar;//4
+    private ArrayList PoliticasQueSoporta;//3 (para agregar políticas) y 7 (para quitar políticas)
+    private ArrayList TareasARealizar;//4 (para agregar políticas) y 8 (para quitar políticas)
     private Time tiempoDeMonitoreo;//5
     private Date proximoMonitoreo;//6
 

@@ -3,6 +3,7 @@ package Controladores.PestanasConPaneles;
 import Controladores.Mediator;
 import Estructuras.Activo;
 import Estructuras.Riesgo;
+import Modelos.EntityDB;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -51,17 +52,7 @@ public class VisualizacionDB implements Pestana{
 
                 @Override
                 public void mouseClicked(MouseEvent me) {
-                    Riesgo r = new Riesgo();
-                    r.setActivo("Servidor");
-                    r.setAmenaza("El itzco!");
-                    r.setImpacto(5);
-                    r.setOcurrencia(5);//Ese itzco está en todos lados
-                    r.setProximoMonitoreo(new Date(1,2,3));
-                    r.setResultado("Interrupcion");
-                    r.setRiesgo(10);//Alto peligro
-                    r.setTiempoDeMonitoreo(new Time(1,2,3));
-                    r.setTratamiento("Aceptarlo");//No se puede hacer nada contra el itzco
-                    m.mostrarPerfil(r);
+                    m.mostrarPerfil(EntityDB.getInstance().planDeSoporteEjemplo());
                 }
                 @Override
                 public void mousePressed(MouseEvent me) {}

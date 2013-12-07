@@ -18,6 +18,7 @@ public abstract class Entidad_P {
     private Politica padre;//7
     private Rol responsable;//8
     private String estado;//9
+    //HIJAS (tanto para proceso como política) 10 (para agregar políticas) y 11 (para quitar políticas)
 
     public String getNombre() {
         return nombre;
