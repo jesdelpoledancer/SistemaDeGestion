@@ -1,6 +1,17 @@
 package Controladores.PestanasConPaneles;
 
 import Controladores.Mediator;
+import Controladores.Privilegios;
+import Modelos.EntityDB;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -31,9 +42,39 @@ public class Organizacion implements Pestana {
     
     @Override
     public void prepararPanel(){
-        /*
-         * Aquí ya sabes pintar imagen y medir los perfiles de roles
-         */
+        try {
+            BufferedImage db = ImageIO.read(new File("ORGANIGRAMA.png"));
+            JLabel truquitoMagico = new JLabel(new ImageIcon(db));
+            organigrama.add(truquitoMagico);
+            truquitoMagico.addMouseListener(new java.awt.event.MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent me) {
+                    int x = me.getX();
+                    int y = me.getY();
+                    if(x > 170 && x < 308){
+                        if(y > 335 && y < 362){
+                            m.mostrarPerfil(EntityDB.getInstance().getRoles().get(1));
+                        } else if(y > 183 && y < 208){
+                            m.mostrarPerfil(EntityDB.getInstance().getRoles().get(2));
+                        }
+                    } else if(x > 20 && x < 122){
+                        if(y > 184 && y < 210){
+                            m.mostrarPerfil(EntityDB.getInstance().getRoles().get(0));
+                        }
+                    }
+                }
+                @Override
+                public void mousePressed(MouseEvent me) {}
+                @Override
+                public void mouseReleased(MouseEvent me) {}
+                @Override
+                public void mouseEntered(MouseEvent me) {}
+                @Override
+                public void mouseExited(MouseEvent me) {}
+            });
+        } catch (IOException ex) {
+            Logger.getLogger(VisualizacionDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
         changePanel(organigrama);
     }
 

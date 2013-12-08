@@ -9,11 +9,12 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class Control {
-    private String nombre;//1
-    private ArrayList riesgosAsociados;//2 (para agregar un riesgo a la lista) 6 (para quitar un riesgo)
-    private Time tiempoDeMonitoreo;//3
-    private Date proximoMonitoreo;//4
-    private ArrayList tareasARealizar;//5 (para agregar una tarea) y 7 (para quitar una tarea)
+    //0 para ver, 1 para crear y 2 para eliminar
+    private String nombre;//3
+    private ArrayList riesgosAsociados;//4 (para agregar un riesgo a la lista) 8 (para quitar un riesgo)
+    private Time tiempoDeMonitoreo;//5
+    private Date proximoMonitoreo;//6
+    private ArrayList tareasARealizar;//7 (para agregar una tarea) y 9 (para quitar una tarea)
 
     public ArrayList getRiesgosAsociados() {
         return riesgosAsociados;

@@ -11,5 +11,10 @@ public class Proceso extends Entidad_P {
         Object[] salida = {"-"};
         return salida;
     }
+
+    @Override
+    public Object[] getHijas() {
+        return new Object[0];
+    }
     
 }

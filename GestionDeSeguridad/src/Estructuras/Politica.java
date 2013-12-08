@@ -9,10 +9,15 @@ import java.util.ArrayList;
 public class Politica extends Entidad_P {
     private ArrayList hijas;
 
-    public ArrayList getHijas() {
-        return hijas;
+    @Override
+    public Object[] getHijas() {
+        return hijas.toArray();
     }
 
+    public ArrayList getHijasA() {
+        return hijas;
+    }
+    
     public void setHijas(ArrayList hijas) {
         this.hijas = hijas;
     }

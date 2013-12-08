@@ -8,15 +8,16 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class Riesgo {
-    private String amenaza;//1
-    private int ocurrencia;//2
-    private int impacto;//3
-    private int riesgo;//4
-    private String tratamiento;//5
-    private String resultado;//6
-    private Time tiempoDeMonitoreo;//7
-    private Date proximoMonitoreo;//8
-    private String activo;//9
+    //0 para ver, 1 para agregar y 2 para eliminar
+    private String amenaza;//3
+    private int ocurrencia;//4
+    private int impacto;//5
+    private int riesgo;//6
+    private String tratamiento;//7
+    private String resultado;//8
+    private Time tiempoDeMonitoreo;//9
+    private Date proximoMonitoreo;//10
+    private String activo;//11
 
     public String getAmenaza() {
         return amenaza;

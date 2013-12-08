@@ -30,6 +30,9 @@ public class Avisos implements Pestana {
     
     @Override
     public void prepararPanel(){
+        /*
+         * Changa tuya itzco... ya sabes qué hacer aquí
+         */
         changePanel(pizarra);
     }
 

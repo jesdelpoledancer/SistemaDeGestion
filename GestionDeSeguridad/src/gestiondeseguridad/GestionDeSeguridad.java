@@ -76,7 +76,7 @@ public class GestionDeSeguridad {
          * Lectura
         */
         
-        /*
+        
         LectorEscritorDeEntidades l= new LectorEscritorDeEntidades();
        l.leerEntidadesDirectas();
        EntityDB db=EntityDB.getInstance();
@@ -89,6 +89,6 @@ public class GestionDeSeguridad {
             for (Object e : tt) {
                 Tarea r=(Tarea)e;
                 System.out.println("Tarea:"+r.getNombre()+" Descripcion: "+r.getDescripcion());
-            }*/
+            }
     }
 }

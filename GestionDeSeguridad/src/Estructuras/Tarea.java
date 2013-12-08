@@ -8,6 +8,17 @@ public class Tarea {
     private String nombre;//1
     private String descripcion;//2
 
+    public Tarea(){
+    }
+    
+    public Tarea(String nombre){
+    }
+    
+    public Tarea(String nombre,String descripcion){
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+    
     public String getNombre() {
         return nombre;
     }

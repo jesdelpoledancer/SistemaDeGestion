@@ -9,12 +9,13 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class PlanDeSoporte {
-    private String nombre;//1
-    private String descripcion;//2
-    private ArrayList PoliticasQueSoporta;//3 (para agregar políticas) y 7 (para quitar políticas)
-    private ArrayList TareasARealizar;//4 (para agregar políticas) y 8 (para quitar políticas)
-    private Time tiempoDeMonitoreo;//5
-    private Date proximoMonitoreo;//6
+    //0 para ver, 1 para agregar y 2 para eliminar
+    private String nombre;//3
+    private String descripcion;//4
+    private ArrayList PoliticasQueSoporta;//5 (para agregar políticas) y 9 (para quitar políticas)
+    private ArrayList TareasARealizar;//6 (para agregar tareas) y 10 (para quitar tareas)
+    private Time tiempoDeMonitoreo;//7
+    private Date proximoMonitoreo;//8
 
     public void agregarPolitica(Entidad_P in){
         /*

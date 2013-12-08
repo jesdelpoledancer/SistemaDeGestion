@@ -23,37 +23,30 @@ public class Menu extends javax.swing.JFrame {
             case 1:
                 jPanel1.removeAll();
                 jPanel1.add(calendario);
-                System.out.println("Cambios en el panel Calendario");
             break;
             case 2:
                 jPanel2.removeAll();
                 jPanel2.add(calendario);
-                System.out.println("Cambios en el panel Organización");
             break;
             case 3:
                 jPanel3.removeAll();
                 jPanel3.add(calendario);
-                System.out.println("Cambios en el panel Políticas");
             break;
             case 4:
                 jPanel4.removeAll();
                 jPanel4.add(calendario);
-                System.out.println("Cambios en el panel Asociaciones");
             break;
             case 5:
                 jPanel5.removeAll();
                 jPanel5.add(calendario);
-                System.out.println("Cambios en el panel Recursos");
             break;
             case 6:
                 jPanel6.removeAll();
                 jPanel6.add(calendario);
-                System.out.println("Cambios en el panel Avisos");
             break;
             case 7:
                 jPanel7.removeAll();
                 jPanel7.add(calendario);
-                System.out.println("Cambios en el panel Salidas");
             break;
         }
     }

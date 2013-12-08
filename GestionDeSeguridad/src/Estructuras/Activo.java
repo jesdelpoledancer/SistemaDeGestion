@@ -9,13 +9,14 @@ import java.util.Date;
  * @author Itzcoatl90
  */
 public class Activo {
-    private ArrayList riesgos;//7 (para agregar riesgo) y 8 (para quitar un riesgo)
-    private String nombre;//1
-    private String costoModificacion;//2
-    private String costoInterrupcion;//3
-    private String costoRevelacion;//4
-    private Time tiempoDeMonitoreo;//5
-    private Date proximoMonitoreo;//6
+    //0 para ver, 1 para crear y 2 para eliminar
+    private ArrayList riesgos;//9 (para agregar riesgo) y 10 (para quitar un riesgo)
+    private String nombre;//3
+    private String costoModificacion;//4
+    private String costoInterrupcion;//5
+    private String costoRevelacion;//6
+    private Time tiempoDeMonitoreo;//7
+    private Date proximoMonitoreo;//8
     public ArrayList getRiesgos() {
         return riesgos;
     }

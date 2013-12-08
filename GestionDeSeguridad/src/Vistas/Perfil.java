@@ -21,10 +21,9 @@ public class Perfil extends javax.swing.JFrame {
     
     public void change(javax.swing.JPanel n){
         jPanel1.removeAll();
+        jPanel1.setBounds(0,0,700,500);
         jPanel1.add(n);
         n.setBounds(0,0,jPanel1.getWidth(),jPanel1.getHeight());
-        System.out.println("jPanel1:"+jPanel1.getHeight()+","+jPanel1.getWidth()+"<|>"+n.getHeight()+","+n.getWidth());
-        this.pack();
         this.repaint();
     }
     
@@ -35,6 +34,8 @@ public class Perfil extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(400, 300));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
