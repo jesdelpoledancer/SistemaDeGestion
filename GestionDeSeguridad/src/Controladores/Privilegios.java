@@ -19,45 +19,52 @@ public class Privilegios {
 
         private static final Privilegios INSTANCE = new Privilegios();
     }
-    public String ObjetoEstructura(Object obj){
-         String objeto1="";
+    
+     public int ObjetoEstructura(Object obj){
+         int objeto1=0;
         
         if(obj instanceof Estructuras.Activo == true)
-            objeto1 ="Activo";
+            objeto1 =1;
         if(obj instanceof Estructuras.Control == true)
-            objeto1 ="Control";
-        if(obj instanceof Estructuras.DatosConfidenciales == true)
-            objeto1 ="DatoConf";
-        if(obj instanceof Estructuras.DiccionarioDePrivilegios == true)
-            objeto1 ="DiccPriv";
+            objeto1 =2;
         if(obj instanceof Estructuras.Entidad_P == true)
-            objeto1 ="Entidad";
-        if(obj instanceof Estructuras.Persona == true)
-            objeto1 ="Persona";
+            objeto1 =3;
         if(obj instanceof Estructuras.PlanDeSoporte == true)
-            objeto1 ="PlanSoporte";
-        if(obj instanceof Estructuras.Politica == true)
-            objeto1 ="Politica";
-        if(obj instanceof Estructuras.Proceso == true)
-            objeto1 ="Proceso";
+            objeto1 =4;
         if(obj instanceof Estructuras.Riesgo == true)
-            objeto1 ="Riesgo";
+            objeto1 =5;
+        if(obj instanceof Estructuras.Rol == true)
+            objeto1 = 6;
         
         return objeto1;
     }
     
+        
     public boolean ver(Rol rol,Object obj){
        
-        /*
-         * Este método revisa si el rol puede mirar el TIPO de objeto
-         * obj... Para esto, se debe checar que es obj (instanceOf), o
-         * hacer un método por cada entidad diferente (riesgo, activo,
-         * politica, control, plan de soporte).
-         * 
-         * Regresa true si puede hacerlo
-         * Regresa false si no
-         */
-        //verificamos instancia
+       switch(ObjetoEstructura(obj))
+            {
+		case 1: 
+                    return ((boolean[])rol.getPrivilegios().get(1))[0];
+            
+                case 2:
+                    return ((boolean[])rol.getPrivilegios().get(2))[0];
+                   
+                case 3:
+                    return ((boolean[])rol.getPrivilegios().get(3))[0];
+                    
+                case 4:
+                    return ((boolean[])rol.getPrivilegios().get(4))[0];
+                
+                case 5:
+                    return ((boolean[])rol.getPrivilegios().get(5))[0];
+                    
+                case 6:
+                    return ((boolean[])rol.getPrivilegios().get(6))[0];
+                
+                default:
+                    break;
+       }
         
         
             
@@ -65,43 +72,89 @@ public class Privilegios {
     }
     
     public boolean crear(Rol rol, Object obj){
-        /*
-         * Este método revisa si el rol puede crear el TIPO de objeto
-         * obj... Para esto, se debe checar que es obj (instanceOf), o
-         * hacer un método por cada entidad diferente (riesgo, activo,
-         * politica, control, plan de soporte).
-         * 
-         * Regresa true si puede hacerlo
-         * Regresa false si no
-         */
+            switch(ObjetoEstructura(obj))
+        {
+		case 1: 
+                    return ((boolean[])rol.getPrivilegios().get(1))[1];
+            
+                case 2:
+                    return ((boolean[])rol.getPrivilegios().get(2))[1];
+                   
+                case 3:
+                    return ((boolean[])rol.getPrivilegios().get(3))[1];
+                    
+                case 4:
+                    return ((boolean[])rol.getPrivilegios().get(4))[1];
+                
+                case 5:
+                    return ((boolean[])rol.getPrivilegios().get(5))[1];
+                    
+                case 6:
+                    return ((boolean[])rol.getPrivilegios().get(6))[1];
+                
+                default:
+                    break;
+       }
         return true;
     }
     
     public boolean eliminar(Rol rol, Object obj){
-        /*
-         * Este método revisa si el rol puede eliminar el TIPO de objeto
-         * obj... Para esto, se debe checar que es obj (instanceOf), o
-         * hacer un método por cada entidad diferente (riesgo, activo,
-         * politica, control, plan de soporte).
-         * 
-         * Regresa true si puede hacerlo
-         * Regresa false si no
-         */
+           
+        switch(ObjetoEstructura(obj))
+            {
+		case 1: 
+                    return ((boolean[])rol.getPrivilegios().get(1))[2];
+                
+                case 2:
+                    return ((boolean[])rol.getPrivilegios().get(2))[2];
+                   
+                case 3:
+                    return ((boolean[])rol.getPrivilegios().get(3))[2];
+                    
+                case 4:
+                    return ((boolean[])rol.getPrivilegios().get(4))[2];
+                
+                case 5:
+                    return ((boolean[])rol.getPrivilegios().get(5))[2];
+                    
+                case 6:
+                    return ((boolean[])rol.getPrivilegios().get(6))[2];
+                
+                default:
+                    break;
+       }
         return true;
     }
     
     public boolean modificar(Rol rol, Object obj, int numeroAtributo){
-        /*
-         * Este método revisa si el rol puede modificar el TIPO de objeto
-         * obj (y el número de atributo numeroAtributo)... Para esto, se
-         * debe checar que es obj (instanceOf), o
-         * hacer un método por cada entidad diferente (riesgo, activo,
-         * politica, control, plan de soporte).
-         * 
-         * Regresa true si puede hacerlo
-         * Regresa false si no
-         */
-        return true;
+   
+        switch(ObjetoEstructura(obj))
+        {
+		case 1: 
+                    return ((boolean[])rol.getPrivilegios().get(1))[numeroAtributo];
+            
+                case 2:
+                    return ((boolean[])rol.getPrivilegios().get(2))[numeroAtributo];
+                   
+                case 3:
+                    return ((boolean[])rol.getPrivilegios().get(3))[numeroAtributo];
+                    
+                case 4:
+                    return ((boolean[])rol.getPrivilegios().get(4))[numeroAtributo];
+                
+                case 5:
+                    return ((boolean[])rol.getPrivilegios().get(5))[numeroAtributo];
+                    
+                case 6:
+                    return ((boolean[])rol.getPrivilegios().get(6))[numeroAtributo];
+                
+                default:
+                    break;
+       }
+                    
+     return true;
     }
+    
+ 
     
 }
