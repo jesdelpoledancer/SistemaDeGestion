@@ -128,7 +128,7 @@ public class Calendario implements Pestana {
         Calendar cal = Calendar.getInstance();
         EntityDB entidadDB = EntityDB.getInstance();
         
-        System.out.println (fecha);                
+        //System.out.println (fecha);
         SimpleDateFormat dateFormat = new SimpleDateFormat();
         
         dateFormat.applyPattern("dd");
@@ -145,7 +145,7 @@ public class Calendario implements Pestana {
         cal.set(Calendar.MONTH,mes-1);
 	dial = cal.get(Calendar.DAY_OF_WEEK);
         
-        System.out.println("Fecha:: "+dial+" "+dia+"/"+mes+"/"+anio);
+        //System.out.println("Fecha:: "+dial+" "+dia+"/"+mes+"/"+anio);
                        
         JPanel[] diasArray = new JPanel[35];        
         JLabel dias = new JLabel("Dom         Lun         Mar           Mie             Jue             Vie         Sab   ");

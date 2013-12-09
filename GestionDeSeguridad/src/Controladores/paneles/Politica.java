@@ -1,5 +1,10 @@
 package Controladores.paneles;
 
+import Controladores.Mediator;
+import Estructuras.Entidad_P;
+import Modelos.EntityDB;
+import java.util.ArrayList;
+import java.util.Stack;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -10,9 +15,17 @@ import javax.swing.JOptionPane;
 public class Politica extends javax.swing.JPanel {
 
     private String descripcionAntiguo;
+    private String nombreAntiguo;
+    private String responsableAntiguo;
+    private String estadoAntiguo;
     JFrame frame;
+    Mediator m;
     public Politica() {
         initComponents();
+    }
+    
+    public void setMediator(Mediator m){
+        this.m = m;
     }
     
     public void setNombre(String nombre){
@@ -75,7 +88,31 @@ public class Politica extends javax.swing.JPanel {
     public void setHijas(Object[] hijas){
         jList1.setListData(hijas);
     }
-
+    
+    public void setAgregarControlesEnable(boolean in){
+        jButton3.setEnabled(in);
+    }
+    
+    public void setQuitarControlesEnable(boolean in){
+        jButton4.setEnabled(in);
+    }
+    
+    public void setAgregarHijasEnable(boolean in){
+        jButton1.setEnabled(in);
+    }
+    
+    public void setQuitarHijasEnable(boolean in){
+        jButton2.setEnabled(in);
+    }
+    
+    public void setAgregarActivosEnable(boolean in){
+        jButton5.setEnabled(in);
+    }
+    
+    public void setQuitarActivosEnable(boolean in){
+        jButton6.setEnabled(in);
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -122,16 +159,34 @@ public class Politica extends javax.swing.JPanel {
 
         jTextField1.setEditable(false);
         jTextField1.setText("Politica General");
+        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField1FocusLost(evt);
+            }
+        });
 
         jLabel3.setText("Tiempo De Monitoreo");
 
         jTextField2.setEditable(false);
         jTextField2.setText("30 dias");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Proximo Monitoreo");
 
         jTextField3.setEditable(false);
         jTextField3.setText("30/12/2013");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -211,16 +266,37 @@ public class Politica extends javax.swing.JPanel {
 
         jTextField5.setEditable(false);
         jTextField5.setText("Director TI");
+        jTextField5.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField5FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField5FocusLost(evt);
+            }
+        });
 
         jLabel7.setText("Estado");
 
         jTextField6.setEditable(false);
         jTextField6.setText("Por verificar");
+        jTextField6.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField6FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField6FocusLost(evt);
+            }
+        });
 
         jLabel8.setText("Politica Padre");
 
         jTextField7.setEditable(false);
         jTextField7.setText("Mision de seguridad");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Hijas");
 
@@ -229,11 +305,26 @@ public class Politica extends javax.swing.JPanel {
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jList1);
 
         jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Eliminar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -288,17 +379,42 @@ public class Politica extends javax.swing.JPanel {
         jLabel9.setText("Controles");
 
         jButton3.setText("Agregar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Eliminar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Agregar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Eliminar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jList2.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
+        });
+        jList2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList2MouseClicked(evt);
+            }
         });
         jScrollPane2.setViewportView(jList2);
 
@@ -306,6 +422,11 @@ public class Politica extends javax.swing.JPanel {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
+        });
+        jList3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList3MouseClicked(evt);
+            }
         });
         jScrollPane3.setViewportView(jList3);
 
@@ -393,55 +514,168 @@ public class Politica extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField4FocusGained
-        descripcionAntiguo = jTextField1.getText();
+        descripcionAntiguo = jTextField4.getText();
     }//GEN-LAST:event_jTextField4FocusGained
 
     private void jTextField4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField4FocusLost
-        /*
-     if(i==0){
-                
-            }
-     * 
-     */
-        if(!descripcionAntiguo.equals(jTextField1.getText())){
-            int i = JOptionPane.showConfirmDialog(frame, "Seguro que quieres cambiar el nombre del Rol: "+descripcionAntiguo+
-                "\npor "+jTextField1.getText());
+        if(!descripcionAntiguo.equals(jTextField4.getText())){
+            int i = JOptionPane.showConfirmDialog(frame, "Seguro que quieres cambiar la descripción de la política: "+descripcionAntiguo+
+                "\npor "+jTextField4.getText());
             if(i==0){
-                /*for (int j = 0; j < EntityDB.getInstance().getPlanesDeSoporte().size(); j++) {
-                    ArrayList p = ((Estructuras.PlanDeSoporte)EntityDB.getInstance().getPlanesDeSoporte().get(j)).getPoliticasQueSoporta();
-                    for (int k = 0; k < p.size(); k++) {
-                        if(p.get(k)==nombreAntiguo){
-                            p.set(k, jTextField1.getText());
-                        }
+                Stack s = new Stack();
+                s.push(EntityDB.getInstance().getRoot());
+                while(s.size() != 0){
+                    Entidad_P p = (Entidad_P)s.pop();
+                    if(p.getDescripcion().equals(descripcionAntiguo)){
+                        p.setDescripcion(jTextField4.getText());
+                    }
+                    for (int j = 0; j < p.getHijas().length; j++) {
+                        s.push(p.getHijas()[j]);
                     }
                 }
-                nombreAntiguo = jTextField1.getText();
-                
-                
-                for (int j = 0; j < EntityDB.getInstance().getRoles().size(); j++) {
-                    Rol r = (Rol)EntityDB.getInstance().getRoles().get(j);
-                    if(r.getNombre().equals(nombreAntiguo)){
-                        r.setNombre(jTextField1.getText());
+            }
+        }
+    }//GEN-LAST:event_jTextField4FocusLost
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
+        nombreAntiguo = jTextField1.getText();
+    }//GEN-LAST:event_jTextField1FocusGained
+
+    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
+        if(!nombreAntiguo.equals(jTextField1.getText())){
+            int i = JOptionPane.showConfirmDialog(frame, "Seguro que quieres cambiar la descripción de la política: "+nombreAntiguo+
+                "\npor "+jTextField1.getText());
+            if(i==0){
+                for (int j = 0; j < EntityDB.getInstance().getPlanesDeSoporte().size(); j++) {
+                    ArrayList p = ((Estructuras.PlanDeSoporte)EntityDB.getInstance().getPlanesDeSoporte().get(j)).getPoliticasQueSoporta();
+                    for (int k = 0; k < p.size(); k++) {
+                        if(p.get(k).equals(nombreAntiguo)){
+                            p.set(k, jTextField1.getText());
+                        }
                     }
                 }
                 Stack s = new Stack();
                 s.push(EntityDB.getInstance().getRoot());
                 while(s.size() != 0){
                     Entidad_P p = (Entidad_P)s.pop();
-                    if(p.getResponsable().equals(nombreAntiguo)){
-                        p.setResponsable(jTextField1.getText());
+                    if(p.getNombre().equals(nombreAntiguo)){
+                        p.setNombre(jTextField1.getText());
                     }
                     for (int j = 0; j < p.getHijas().length; j++) {
                         s.push(p.getHijas()[j]);
                     }
                 }
-                if(EntityDB.getInstance().getPersona().getStringRol().equals(nombreAntiguo)){
-                    EntityDB.getInstance().getPersona().setStringRol(jTextField1.getText());
-                }
-                nombreAntiguo = jTextField1.getText();*/
+                nombreAntiguo = jTextField1.getText();
             }
         }
-    }//GEN-LAST:event_jTextField4FocusLost
+    }//GEN-LAST:event_jTextField1FocusLost
+
+    private void jTextField5FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField5FocusGained
+        responsableAntiguo = jTextField5.getText();
+    }//GEN-LAST:event_jTextField5FocusGained
+
+    private void jTextField5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField5FocusLost
+        if(!responsableAntiguo.equals(jTextField5.getText())){
+            int i = JOptionPane.showConfirmDialog(frame, "Seguro que quieres cambiar el rol responsable: "+responsableAntiguo+
+                "\npor "+jTextField5.getText());
+            if(i==0){
+                boolean puede = false;
+                for (int j = 0; j < EntityDB.getInstance().getRoles().size(); j++) {
+                    if(EntityDB.getInstance().getRoles().get(j).equals(jTextField5.getText())){
+                        puede = true;
+                        break;
+                    }
+                }
+                if(puede){
+                    Stack s = new Stack();
+                    s.push(EntityDB.getInstance().getRoot());
+                    while(s.size() != 0){
+                        Entidad_P p = (Entidad_P)s.pop();
+                        if(p.getNombre().equals(jTextField1.getText())){
+                            p.setResponsable(jTextField5.getText());
+                        }
+                        for (int j = 0; j < p.getHijas().length; j++) {
+                            s.push(p.getHijas()[j]);
+                        }
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(frame, "No existe el Rol que has puesto como responsable");
+                }
+            }
+        }
+    }//GEN-LAST:event_jTextField5FocusLost
+
+    private void jTextField6FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField6FocusGained
+        estadoAntiguo = jTextField6.getText();
+    }//GEN-LAST:event_jTextField6FocusGained
+
+    private void jTextField6FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField6FocusLost
+        if(!estadoAntiguo.equals(jTextField6.getText())){
+            int i = JOptionPane.showConfirmDialog(frame, "Seguro que quieres cambiar Estado: "+estadoAntiguo+
+                "\npor "+jTextField6.getText());
+            if(i==0){
+                Stack s = new Stack();
+                s.push(EntityDB.getInstance().getRoot());
+                while(s.size() != 0){
+                    Entidad_P p = (Entidad_P)s.pop();
+                    if(p.getNombre().equals(jTextField1.getText())){
+                        p.setEstado(jTextField6.getText());
+                    }
+                    for (int j = 0; j < p.getHijas().length; j++) {
+                        s.push(p.getHijas()[j]);
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_jTextField6FocusLost
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jList2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MouseClicked
+        m.mostrarPerfil(EntityDB.getInstance().encuentraControl((String)jList2.getSelectedValue()));
+    }//GEN-LAST:event_jList2MouseClicked
+
+    private void jList3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList3MouseClicked
+        m.mostrarPerfil(EntityDB.getInstance().encuentraActivos((String)jList3.getSelectedValue()));
+    }//GEN-LAST:event_jList3MouseClicked
+
+    private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
+        m.mostrarPerfil(EntityDB.getInstance().encuentraPolitica((String)jList1.getSelectedValue()));
+    }//GEN-LAST:event_jList1MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JOptionPane.showMessageDialog(frame, "Buena elección! Esta aún no la tenemos implementada!   =(");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

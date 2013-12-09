@@ -114,24 +114,28 @@ public class Mediator {
         if(Control_privilegio.ver(r, obj)){
             if(obj instanceof Estructuras.Activo){
                 ACTIVO = new PerfilDeActivo();
+                ACTIVO.setMediator(this);
                 Estructuras.Activo puntero = (Estructuras.Activo)obj;
                 Control_perfil.change(ACTIVO, puntero, r);
                 Vista_perfil.change(ACTIVO);
             }else
             if(obj instanceof Estructuras.Control){
                 CONTROL = new PerfilDeControl();
+                CONTROL.setMediator(this);
                 Estructuras.Control puntero = (Estructuras.Control)obj;
                 Control_perfil.change(CONTROL, puntero, r);
                 Vista_perfil.change(CONTROL);
             }else
             if(obj instanceof Estructuras.Entidad_P){
                 POLITICA = new Politica();
+                POLITICA.setMediator(this);
                 Estructuras.Entidad_P puntero = (Estructuras.Entidad_P)obj;
                 Control_perfil.change(POLITICA, puntero, r);
                 Vista_perfil.change(POLITICA);
             }else
             if(obj instanceof Estructuras.PlanDeSoporte){
                 SOPORTE = new PerfilDePlanDeSoporte();
+                SOPORTE.setMediator(this);
                 Estructuras.PlanDeSoporte puntero = (Estructuras.PlanDeSoporte)obj;
                 Control_perfil.change(SOPORTE, puntero, r);
                 Vista_perfil.change(SOPORTE);
@@ -150,12 +154,6 @@ public class Mediator {
             }
             Vista_perfil.setVisible(true);
         }
-    }
-    
-    public void agregarRiesgoAActivo(){
-    }
-    
-    public void quitarRiesgoAActivo(){
     }
     
 }

@@ -46,24 +46,8 @@ public class VisualizacionDB implements Pestana{
     public void prepararPanel(){
         try {
             BufferedImage db = ImageIO.read(new File("VisualDB.jpg"));
-            JLabel truquitoMagico = new JLabel(new ImageIcon(db));
-            mapalogico.add(truquitoMagico);
-            
-            truquitoMagico.addMouseListener(new java.awt.event.MouseListener() {
-                @Override
-                public void mouseClicked(MouseEvent me) {
-                    m.mostrarPerfil(EntityDB.getInstance().getRoles().get(0));
-                }
-                @Override
-                public void mousePressed(MouseEvent me) {}
-                @Override
-                public void mouseReleased(MouseEvent me) {}
-                @Override
-                public void mouseEntered(MouseEvent me) {}
-                @Override
-                public void mouseExited(MouseEvent me) {}
-            });
-            
+            JLabel mapIm = new JLabel(new ImageIcon(db));
+            mapalogico.add(mapIm);
         } catch (IOException ex) {
             Logger.getLogger(VisualizacionDB.class.getName()).log(Level.SEVERE, null, ex);
         }

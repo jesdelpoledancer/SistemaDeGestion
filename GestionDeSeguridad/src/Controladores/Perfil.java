@@ -37,6 +37,8 @@ public class Perfil {
         ACTIVO.setCostoRevEnabled(Privilegios.getInstance().modificar(r, puntero, 6));
         ACTIVO.setTiempoMonEnabled(Privilegios.getInstance().modificar(r, puntero, 7));
         ACTIVO.setProximaMonEnabled(Privilegios.getInstance().modificar(r, puntero, 8));
+        ACTIVO.setAgregarRiesgosEnabled(Privilegios.getInstance().modificar(r, puntero, 9));
+        ACTIVO.setQuitarRiesgosEnabled(Privilegios.getInstance().modificar(r, puntero, 10));
     }
     
     public void change(PerfilDeControl CONTROL, Control puntero, Rol r){
@@ -57,6 +59,10 @@ public class Perfil {
         CONTROL.setNombreEnabled(Privilegios.getInstance().modificar(r, puntero, 3));
         CONTROL.setTiempoMonEnabled(Privilegios.getInstance().modificar(r, puntero, 5));
         CONTROL.setProximaMonEnabled(Privilegios.getInstance().modificar(r, puntero, 6));
+        CONTROL.setAgregarRiesgoEnabled(Privilegios.getInstance().modificar(r, puntero, 4));
+        CONTROL.setQuitarRiesgoEnabled(Privilegios.getInstance().modificar(r, puntero, 8));
+        CONTROL.setAgregarTareaEnabled(Privilegios.getInstance().modificar(r, puntero, 7));
+        CONTROL.setQuitarTareaEnabled(Privilegios.getInstance().modificar(r, puntero, 9));
     }
     
     public void change(PerfilDePlanDeSoporte SOPORTE, PlanDeSoporte puntero, Rol r){
@@ -79,6 +85,10 @@ public class Perfil {
         SOPORTE.setDescripcionEnabled(Privilegios.getInstance().modificar(r, puntero,4));
         SOPORTE.setTiempoMonEnabled(Privilegios.getInstance().modificar(r, puntero,7));
         SOPORTE.setProximoMonEnabled(Privilegios.getInstance().modificar(r, puntero,8));
+        SOPORTE.setAgregarTareaEnabled(Privilegios.getInstance().modificar(r, puntero, 6));
+        SOPORTE.setAgregarPoliticasEnabled(Privilegios.getInstance().modificar(r, puntero, 5));
+        SOPORTE.setQuitarTareaEnabled(Privilegios.getInstance().modificar(r, puntero, 10));
+        SOPORTE.setQuitarPoliticasEnabled(Privilegios.getInstance().modificar(r, puntero, 9));
     }
     
     public void change(PerfilDeRiesgo RIESGO, Riesgo puntero, Rol r){
@@ -214,6 +224,12 @@ public class Perfil {
         POLITICA.setProximoMonEnable(Privilegios.getInstance().modificar(r, puntero, 6));
         POLITICA.setResponsableEnable(Privilegios.getInstance().modificar(r, puntero, 10));
         POLITICA.setPadreEnable(Privilegios.getInstance().modificar(r, puntero, 9));
+        POLITICA.setAgregarActivosEnable(Privilegios.getInstance().modificar(r, puntero, 8));
+        POLITICA.setQuitarActivosEnable(Privilegios.getInstance().modificar(r, puntero, 15));
+        POLITICA.setAgregarControlesEnable(Privilegios.getInstance().modificar(r, puntero, 7));
+        POLITICA.setQuitarControlesEnable(Privilegios.getInstance().modificar(r, puntero, 14));
+        POLITICA.setAgregarHijasEnable(Privilegios.getInstance().modificar(r, puntero, 12));
+        POLITICA.setQuitarHijasEnable(Privilegios.getInstance().modificar(r, puntero, 13));
     }
     
 }

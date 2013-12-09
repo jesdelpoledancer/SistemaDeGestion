@@ -14,6 +14,7 @@ import java.sql.Date;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Stack;
 
 /**
  *
@@ -44,6 +45,71 @@ public class EntityDB {
     
     public static EntityDB getInstance() {
         return EntityDBHolder.INSTANCE;
+    }
+    
+    public Riesgo encuentraRiesgo(String nombre){
+        for (int i = 0; i < Riesgos.size(); i++) {
+            Riesgo r = (Riesgo)Riesgos.get(i);
+            if(r.getAmenaza().equals(nombre)){
+                return r;
+            }
+        }
+        return null;
+    }
+    
+    public Rol encuentraRoles(String nombre){
+        for (int i = 0; i < Roles.size(); i++) {
+            Rol r = (Rol)Roles.get(i);
+            if(r.getNombre().equals(nombre)){
+                return r;
+            }
+        }
+        return null;
+    }
+    
+    public Activo encuentraActivos(String nombre){
+        for (int i = 0; i < Activos.size(); i++) {
+            Activo a = (Activo)Activos.get(i);
+            if(a.getNombre().equals(nombre)){
+                return a;
+            }
+        }
+        return null;
+    }
+    
+    public PlanDeSoporte encuentraPlanDeSoporte(String nombre){
+        for (int i = 0; i < PlanesDeSoporte.size(); i++) {
+            PlanDeSoporte a = (PlanDeSoporte)PlanesDeSoporte.get(i);
+            if(a.getNombre().equals(nombre)){
+                return a;
+            }
+        }
+        return null;
+    }
+    
+    public Control encuentraControl(String nombre){
+        for (int i = 0; i < Controles.size(); i++) {
+            Control a = (Control)Controles.get(i);
+            if(a.getNombre().equals(nombre)){
+                return a;
+            }
+        }
+        return null;
+    }
+    
+    public Entidad_P encuentraPolitica(String nombre){
+        Stack s = new Stack();
+        s.push(EntityDB.getInstance().getRoot());
+        while(s.size() != 0){
+            Entidad_P p = (Entidad_P)s.pop();
+            if(p.getNombre().equals(nombre)){
+                return p;
+            }
+            for (int j = 0; j < p.getHijas().length; j++) {
+                s.push(p.getHijas()[j]);
+            }
+        }
+        return null;
     }
     
     private static class EntityDBHolder {

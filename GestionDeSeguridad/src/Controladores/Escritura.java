@@ -73,8 +73,21 @@ public class Escritura {
                 + "LaTeX, así como diversos tipos de templates, junto con espacio de almacenamiento para sus documentos científicos "
                 + "ofreciéndole al mismo un alto grado de confidencialidad,  integridad, disponibilidad y rápido acceso para sus "
                 + "documentos desde cualquier parte del mundo en donde existan servicios de Internet.");
-        mision.setProximoMonitoreo(new Date(1,2,3));//Revisar
-        mision.setTiempoDeMonitoreo(new Time(1,2,3));//Revisar
+        long fecha1 = new Long("1387584000000");//  20/Dic/2013
+        long fecha2 = new Long("1386633600000");//  9/Dic/2013
+        //86400000--> cantidad de milisegundos en un día
+        long fecha3 = new Long("1386633600000");
+        fecha3 += 86400000*3;
+        long fecha4 = new Long("1386633600000");
+        fecha4 += 86400000*7;
+        long fecha5 = new Long("1386633600000");
+        fecha5 += 86400000*10;
+        long fecha6 = new Long("1386633600000");
+        fecha6 += 86400000*15;
+        long fecha7 = new Long("1386633600000");
+        fecha7 += 86400000*18;
+        mision.setProximoMonitoreo(new Date(fecha4));
+        mision.setTiempoDeMonitoreo(new Time(86400000*150));//Cada 150 días
         ArrayList act = new ArrayList();
         act.add("Servidor");
         act.add("Workstation 1");
@@ -91,8 +104,8 @@ public class Escritura {
         Politica aplicacion = new Politica();
         aplicacion.setNombre("Politicas para aplicacion");
         aplicacion.setDescripcion("Las aplicaciones deberán ser seguras.");
-        aplicacion.setProximoMonitoreo(new Date(1,2,3));
-        aplicacion.setTiempoDeMonitoreo(new Time(1,2,3));
+        aplicacion.setProximoMonitoreo(new Date(fecha6));
+        aplicacion.setTiempoDeMonitoreo(new Time(86400000*80));//Cada 80 días
         ArrayList act2 = new ArrayList();
         act2.add("Workstation 1");
         act2.add("Workstation 2");
@@ -109,8 +122,8 @@ public class Escritura {
         Politica servidores = new Politica();
         servidores.setNombre("Politicas para servidores");
         servidores.setDescripcion("Los servidores deberán ofrecer cierto grado de confidencialidad.");
-        servidores.setProximoMonitoreo(new Date(1,2,3));
-        servidores.setTiempoDeMonitoreo(new Time(1,2,3));
+        servidores.setProximoMonitoreo(new Date(fecha1));
+        servidores.setTiempoDeMonitoreo(new Time(86400000*50));//Cada 50 días
         ArrayList act3 = new ArrayList();
         act3.add("Servidor");
         servidores.setActivosAsociados(act3);
@@ -124,8 +137,8 @@ public class Escritura {
         Politica archivos = new Politica();
         archivos.setNombre("Politica para archivo en servidor");
         archivos.setDescripcion("Todos los archivos en el servidor deberán ser cifrados.");
-        archivos.setProximoMonitoreo(new Date(1,2,3));
-        archivos.setTiempoDeMonitoreo(new Time(1,2,3));
+        archivos.setProximoMonitoreo(new Date(fecha3));
+        archivos.setTiempoDeMonitoreo(new Time(86400000*45));//Cada 45 días
         ArrayList act4 = new ArrayList();
         act4.add("Servidor");
         archivos.setActivosAsociados(act4);
@@ -142,8 +155,8 @@ public class Escritura {
         cifrado.setNombre("Proceso de cifrado de archivos");
         cifrado.setDescripcion("Todo archivo en servidor se cifrará con el algoritmo Asimétrico todo el tiempo mientras "
                 + "este se encuentre en el servidor.");
-        cifrado.setProximoMonitoreo(new Date(1,2,3));
-        cifrado.setTiempoDeMonitoreo(new Time(1,2,3));
+        cifrado.setProximoMonitoreo(new Date(fecha2));
+        cifrado.setTiempoDeMonitoreo(new Time(86400000*73));//Cada 73 días
         ArrayList act5 = new ArrayList();
         act5.add("Servidor");
         cifrado.setActivosAsociados(act5);
@@ -161,8 +174,8 @@ public class Escritura {
         EntityDB.getInstance().setRoot(mision);
         Activo servidor = new Activo();
         servidor.setNombre("Servidor");
-        servidor.setProximoMonitoreo(new Date(1,2,3));
-        servidor.setTiempoDeMonitoreo(new Time(1,2,3));
+        servidor.setProximoMonitoreo(new Date(fecha5));
+        servidor.setTiempoDeMonitoreo(new Time(86400000*20));//Cada 20 días
         servidor.setCostoInterrupcion("10000");
         servidor.setCostoModificacion("100000");
         servidor.setCostoRevelacion("Reputación");
@@ -172,8 +185,8 @@ public class Escritura {
         EntityDB.getInstance().agregarActivo(servidor);
         Activo w1 = new Activo();
         w1.setNombre("Workstation 1");
-        w1.setProximoMonitoreo(new Date(1,2,3));
-        w1.setTiempoDeMonitoreo(new Time(1,2,3));
+        w1.setProximoMonitoreo(new Date(fecha7));
+        w1.setTiempoDeMonitoreo(new Time(86400000*37));//Cada 37 días
         w1.setCostoInterrupcion("500");
         w1.setCostoModificacion("1000");
         w1.setCostoRevelacion("1000");
@@ -184,8 +197,8 @@ public class Escritura {
         EntityDB.getInstance().agregarActivo(w1);
         Activo w2 = new Activo();
         w2.setNombre("Workstation 2");
-        w2.setProximoMonitoreo(new Date(1,2,3));
-        w2.setTiempoDeMonitoreo(new Time(1,2,3));
+        w2.setProximoMonitoreo(new Date(fecha6));
+        w2.setTiempoDeMonitoreo(new Time(86400000*39));//Cada 39 días
         w2.setCostoInterrupcion("500");
         w2.setCostoModificacion("1000");
         w2.setCostoRevelacion("1000");
@@ -202,8 +215,8 @@ public class Escritura {
         hackers.setRiesgo(8);
         hackers.setTratamiento("Mitigarlo");
         hackers.setResultado("Interrupcion");
-        hackers.setTiempoDeMonitoreo(new Time(1,2,3));
-        hackers.setProximoMonitoreo(new Date(1,2,3));
+        hackers.setTiempoDeMonitoreo(new Time(fecha2));
+        hackers.setProximoMonitoreo(new Date(86400000*35));//Cada 35 días
         Riesgo virus = new Riesgo();
         virus.setActivo("Workstation 1");
         virus.setAmenaza("Virus");
@@ -212,8 +225,8 @@ public class Escritura {
         virus.setRiesgo(4);
         virus.setTratamiento("Mitigarlo");
         virus.setResultado("Interrupcion");
-        virus.setTiempoDeMonitoreo(new Time(1,2,3));
-        virus.setProximoMonitoreo(new Date(1,2,3));
+        virus.setTiempoDeMonitoreo(new Time(fecha1));
+        virus.setProximoMonitoreo(new Date(86400000*23));//Cada 23 días
         Riesgo malware = new Riesgo();
         malware.setActivo("Workstation 1");
         malware.setAmenaza("Malware");
@@ -222,8 +235,8 @@ public class Escritura {
         malware.setRiesgo(3);
         malware.setTratamiento("Aceptarlo");
         malware.setResultado("Modificacion");
-        malware.setTiempoDeMonitoreo(new Time(1,2,3));
-        malware.setProximoMonitoreo(new Date(1,2,3));
+        malware.setTiempoDeMonitoreo(new Time(fecha7));
+        malware.setProximoMonitoreo(new Date(86400000*15));//Cada 15 días
         Riesgo virus2 = new Riesgo();
         virus2.setActivo("Workstation 2");
         virus2.setAmenaza("Virus");
@@ -232,8 +245,8 @@ public class Escritura {
         virus2.setRiesgo(4);
         virus2.setTratamiento("Mitigarlo");
         virus2.setResultado("Interrupcion");
-        virus2.setTiempoDeMonitoreo(new Time(1,2,3));
-        virus2.setProximoMonitoreo(new Date(1,2,3));
+        virus2.setTiempoDeMonitoreo(new Time(fecha2+86400000*2));
+        virus2.setProximoMonitoreo(new Date(86400000*15));//Cada 15 días
         Riesgo malware2 = new Riesgo();
         malware2.setActivo("Workstation 2");
         malware2.setAmenaza("Malware");
@@ -242,8 +255,8 @@ public class Escritura {
         malware2.setRiesgo(3);
         malware2.setTratamiento("Aceptarlo");
         malware2.setResultado("Modificacion");
-        malware2.setTiempoDeMonitoreo(new Time(1,2,3));
-        malware2.setProximoMonitoreo(new Date(1,2,3));
+        malware2.setTiempoDeMonitoreo(new Time(fecha3+86400000*3));
+        malware2.setProximoMonitoreo(new Date(86400000*15));//Cada 15 días
         EntityDB.getInstance().agregarRiesgo(hackers);
         EntityDB.getInstance().agregarRiesgo(virus);
         EntityDB.getInstance().agregarRiesgo(virus2);
@@ -251,8 +264,8 @@ public class Escritura {
         EntityDB.getInstance().agregarRiesgo(malware2);
         Control lblanca = new Control();
         lblanca.setNombre("Lista blanca de aplicacion");
-        lblanca.setProximoMonitoreo(new Date(1,2,3));
-        lblanca.setTiempoDeMonitoreo(new Time(1,2,3));
+        lblanca.setProximoMonitoreo(new Date(fecha5+86400000*2));
+        lblanca.setTiempoDeMonitoreo(new Time(86400000*14));//Cada 14 días
         ArrayList tar = new ArrayList();
         tar.add(new Tarea("Lista blanca Actualizar","Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista"));
         lblanca.setTareasARealizar(tar);
@@ -261,8 +274,8 @@ public class Escritura {
         lblanca.setRiesgosAsociados(riesgos);
         Control avirus = new Control();
         avirus.setNombre("Antivirus AVIRA");
-        avirus.setProximoMonitoreo(new Date(1,2,3));
-        avirus.setTiempoDeMonitoreo(new Time(1,2,3));
+        avirus.setProximoMonitoreo(new Date(fecha1+86400000*1));
+        avirus.setTiempoDeMonitoreo(new Time(86400000*12));//Cada 12 días
         ArrayList tar2 = new ArrayList();
         tar2.add(new Tarea("Actualizar base de datos de virus","Se debe actualizar la base de datos de virus"));
         tar2.add(new Tarea("Analizar equipos","Se debe hacer un escaneo de virus en todo los equipos"));
@@ -272,8 +285,8 @@ public class Escritura {
         avirus.setRiesgosAsociados(riesgos2);
         Control cifrad = new Control();
         cifrad.setNombre("Cifrado");
-        cifrad.setProximoMonitoreo(new Date(1,2,3));
-        cifrad.setTiempoDeMonitoreo(new Time(1,2,3));
+        cifrad.setProximoMonitoreo(new Date(fecha2+86400000*3));
+        cifrad.setTiempoDeMonitoreo(new Time(86400000*17));//Cada 17 días
         ArrayList tar3 = new ArrayList();
         tar3.add(new Tarea("Revisar algoritmo","Verificar que el algoritmo utilizado siga siendo fuerte y no roto"));
         cifrad.setTareasARealizar(tar3);
@@ -286,8 +299,8 @@ public class Escritura {
         PlanDeSoporte sop = new PlanDeSoporte();
         sop.setNombre("Plan de Contingencia");
         sop.setDescripcion("Es el plan de contingencia para los servicios digitales");
-        sop.setProximoMonitoreo(new Date(1,2,3));
-        sop.setTiempoDeMonitoreo(new Time(1,2,3));
+        sop.setProximoMonitoreo(new Date(fecha6+86400000));
+        sop.setTiempoDeMonitoreo(new Time(86400000*80));//Cada 80 días
         ArrayList tareas = new ArrayList();
         tareas.add(new Tarea("Revision","Revisar origen del problema"));
         tareas.add(new Tarea("Aislamiento","Aislarlo"));
