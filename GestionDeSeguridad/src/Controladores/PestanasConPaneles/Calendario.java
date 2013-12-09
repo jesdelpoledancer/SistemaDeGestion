@@ -263,7 +263,7 @@ public class Calendario implements Pestana {
         }else{ 
             if(componente.getName().substring(0, 5).equals("check")){
                                        
-                String compo = componente.getName().substring(5,6);
+                String compo = componente.getName().substring(5,7);
                 //compo = ;
                 int i=1;
                 ArrayList tempoLista = vecDias.elementAt(Integer.parseInt(compo)-1);
