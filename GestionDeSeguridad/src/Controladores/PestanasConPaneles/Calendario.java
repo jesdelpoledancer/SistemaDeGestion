@@ -148,7 +148,7 @@ public class Calendario implements Pestana {
         //System.out.println("Fecha:: "+dial+" "+dia+"/"+mes+"/"+anio);
                        
         JPanel[] diasArray = new JPanel[35];        
-        JLabel dias = new JLabel("Dom         Lun         Mar           Mie             Jue             Vie         Sab   ");
+        JLabel dias = new JLabel("Dom           Lun             Mar             Mie             Jue                 Vie             Sab   ");
         int x,y,cont,desp;
         JLabel mesLabel = new JLabel("<html>D<br>I<br>C<br>I<br>E<br>M<br>B<br>R<br>E</html>");
         JLabel anioLabel = new JLabel(anio+"");
@@ -318,11 +318,15 @@ public class Calendario implements Pestana {
                             Time tempTime = controlT.getTiempoDeMonitoreo();
                             SimpleDateFormat formatoFecha = new SimpleDateFormat();        
                             formatoFecha.applyPattern("dd-MM-yyyy");
-                            String f1,f2;
+                            String f1,f2;            
                             f1 = formatoFecha.format(fecha);
+                            if (cont <=9 )
+                              f1 = "0"+cont+f1.substring(2,10);
+                            else
+                              f1 = cont+f1.substring(2,10);
                             f2 = formatoFecha.format(tempDate);
-                            if(cont==9)
-                            f2 = "09-12-2013";
+                            //if(cont==9)
+                           // f2 = "09-12-2013";
                 
                             if(f1.equals(f2)){
                                 try {
@@ -363,8 +367,10 @@ public class Calendario implements Pestana {
                                 } catch (IOException ex) {
                                     Logger.getLogger(Calendario.class.getName()).log(Level.SEVERE, null, ex);
                                 }
-                                }else
-                                   vecDias.insertElementAt(null,cont-1);
+                                }else{
+                                   //if(vecDias.elementAt(cont-1) != null)
+                                      vecDias.insertElementAt(null,cont-1);
+                                }
 
                             }                    
                             // System.out.print(elemento+" / ");
@@ -388,9 +394,13 @@ public class Calendario implements Pestana {
                             formatoFecha.applyPattern("dd-MM-yyyy");
                             String f1,f2;
                             f1 = formatoFecha.format(fecha);
+                            if (cont <=9 )
+                              f1 = "0"+cont+f1.substring(2,10);
+                            else
+                              f1 = cont+f1.substring(2,10);
                             f2 = formatoFecha.format(tempDate);
-                            if(cont==9)
-                            f2 = "09-12-2013";
+                            //if(cont==9)
+                            //f2 = "09-12-2013";
                 
                             if(f1.equals(f2)){
                                 try {                     
@@ -451,9 +461,13 @@ public class Calendario implements Pestana {
                             formatoFecha.applyPattern("dd-MM-yyyy");
                             String f1,f2;
                             f1 = formatoFecha.format(fecha);
+                            if (cont <=9 )
+                              f1 = "0"+cont+f1.substring(2,10);
+                            else
+                              f1 = cont+f1.substring(2,10);
                             f2 = formatoFecha.format(tempDate);
-                            if(cont==9)
-                            f2 = "09-12-2013";
+                            //if(cont==9)
+                            //f2 = "09-12-2013";
                 
                             if(f1.equals(f2)){
                                 try {
