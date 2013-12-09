@@ -307,8 +307,6 @@ public class Calendario implements Pestana {
                             if(cont==8)
                             f2 = "08-12-2013";
                 
-                            System.out.println("--------------\nControl \n"+nombreT+"\n---------------");
-                            System.out.println("Hora: "+tempTime+"\nFecha: "+tempDate);
                             if(f1.equals(f2)){
                                 try {
                                     ArrayList tempL = controlT.getTareasARealizar();                            
@@ -372,8 +370,6 @@ public class Calendario implements Pestana {
                             if(cont==8)
                             f2 = "08-12-2013";
                 
-                            System.out.println("--------------\nControl \n"+riesgoT+"\n---------------");
-                            System.out.println("Hora: "+tempTime+"\nFecha: "+tempDate);
                             if(f1.equals(f2)){
                                 try {                     
                                     
@@ -437,8 +433,6 @@ public class Calendario implements Pestana {
                             if(cont==8)
                             f2 = "08-12-2013";
                 
-                            System.out.println("--------------\nControl \n"+nombreT+"\n---------------");
-                            System.out.println("Hora: "+tempTime+"\nFecha: "+tempDate);
                             if(f1.equals(f2)){
                                 try {
                                     ArrayList tempL = planT.getTareasARealizar();                            
