@@ -27,6 +27,7 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -46,7 +47,9 @@ public class Calendario implements Pestana {
         calendario = new JPanel();
         calendario.setSize(595,489);
         listaDePendientes = new JPanel();
-        listaDePendientes.setSize(595,489);                                       
+        listaDePendientes.setSize(595,489); 
+        listaDePendientes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        listaDePendientes.setLayout(new BoxLayout(listaDePendientes, BoxLayout.PAGE_AXIS));
         this.m = m;               
     }
     
@@ -257,33 +260,47 @@ public class Calendario implements Pestana {
             listaDePendientes.removeAll();
             m.changePanel(1, calendario);
             
-        }else{        
-        String compo = componente.getName();
-        compo = "8";
-        int i=1;
-        ArrayList tempoLista = vecDias.elementAt(Integer.parseInt(compo)-1);
-        Iterator itera = tempoLista.iterator();        
-        while(itera.hasNext()){
-            ListaTareas lisTar = (ListaTareas)itera.next();
-            listaDePendientes.add(new JLabel(lisTar.nombre+": "+lisTar.descripcion));
+        }else{ 
+            if(componente.getName().substring(0, 5).equals("check")){
+                                       
+                String compo = componente.getName().substring(5,6);
+                //compo = ;
+                int i=1;
+                ArrayList tempoLista = vecDias.elementAt(Integer.parseInt(compo)-1);
+                Iterator itera = tempoLista.iterator();        
+                while(itera.hasNext()){
+                    ListaTareas lisTar = (ListaTareas)itera.next();
+                    JLabel tempLabelL = new JLabel(lisTar.nombre+": "+lisTar.descripcion);
+                    //tempLabelL.setText("<html><a href="+">"+lisTar.nombre+": "+lisTar.descripcion+"</a></html>");
+                    tempLabelL.setText("<html><a href="+">"+lisTar.nombre+"</a></html>");
+                    tempLabelL.addMouseListener(new MouseAdapter(){
+                        public void mouseClicked(MouseEvent ev){
+                            Component invoca = (Component) ev.getSource();
+                    //System.out.println(ev.toString().indexOf(" imprime... "));
+                    
+                                m.mostrarPerfil(EntityDB.getInstance().getControles().get(1));
+                                metodosDeRespuesta(invoca);
+                            }
+                        });
+                    listaDePendientes.add(tempLabelL);
             
-        }
-        JButton botonListaPendientes = new JButton("OK");
-        botonListaPendientes.setName("botonOk");
-        botonListaPendientes.addMouseListener(new MouseAdapter(){
+                }
+            JButton botonListaPendientes = new JButton("OK");
+            botonListaPendientes.setName("botonOk");
+            botonListaPendientes.addMouseListener(new MouseAdapter(){
                 public void mouseClicked(MouseEvent ev){
-                    Component invoca = (Component) ev.getSource();        
-                    System.out.println("Boton OK: "+invoca);  
+                    Component invoca = (Component) ev.getSource();
+                    //System.out.println("Boton OK: "+invoca);  
                     metodosDeRespuesta(invoca);
                 }
-        });
+            });
         listaDePendientes.add(botonListaPendientes);
         
         //m.mostrarPerfil(EntityDB.getInstance().getControles().get(1));
         listaDePendientes.setVisible(true);         
         changePanel(listaDePendientes);
         }
-        
+        }
         //changePanel(calendario);
         
     }
@@ -304,28 +321,33 @@ public class Calendario implements Pestana {
                             String f1,f2;
                             f1 = formatoFecha.format(fecha);
                             f2 = formatoFecha.format(tempDate);
-                            if(cont==8)
-                            f2 = "08-12-2013";
+                            if(cont==9)
+                            f2 = "09-12-2013";
                 
                             if(f1.equals(f2)){
                                 try {
                                     ArrayList tempL = controlT.getTareasARealizar();                            
                                     Iterator iterador2 = tempL.iterator();
+                                    int contaIte=0;
                                     while(iterador2.hasNext()){
                                         Tarea t1 = (Tarea)iterador2.next();
                                         //vecDias.insertElementAt(tempL,cont-1);   
                                         if(vecDias.elementAt(cont-1) != null)
-                                            vecDias.elementAt(cont-1).add(new ListaTareas(t1.getNombre(),t1.getDescripcion()));
+                                            vecDias.elementAt(cont-1).add(new ListaTareas(t1.getNombre(),t1.getDescripcion(),"C",contaIte));
                                         else{
                                             ArrayList tempAL = new ArrayList();
-                                            tempAL.add(new ListaTareas(t1.getNombre(),t1.getDescripcion()));
+                                            tempAL.add(new ListaTareas(t1.getNombre(),t1.getDescripcion(),"C",contaIte));
                                             vecDias.insertElementAt(tempAL,cont-1);
                                         }
+                                        contaIte++;
                                     }                                                                        
                                                                         
                                     BufferedImage check = ImageIO.read(new File("gCheck.png"));
                                     JLabel labelCheck = new JLabel(new ImageIcon(check));
-                                    labelCheck.setName("check"+cont);
+                                    if(cont<=9)
+                                        labelCheck.setName("check0"+cont);
+                                    else
+                                        labelCheck.setName("check"+cont);
                                     //organigrama.add(truquitoMagico);
                                     //truquitoMagico.addMouseListener(new java.awt.event.MouseListener() {
                                                                         
@@ -367,18 +389,18 @@ public class Calendario implements Pestana {
                             String f1,f2;
                             f1 = formatoFecha.format(fecha);
                             f2 = formatoFecha.format(tempDate);
-                            if(cont==8)
-                            f2 = "08-12-2013";
+                            if(cont==9)
+                            f2 = "09-12-2013";
                 
                             if(f1.equals(f2)){
                                 try {                     
                                     
                                    //vecDias.insertElementAt(t1,cont-1);
                                     if(vecDias.elementAt(cont-1)!=null)
-                                        vecDias.elementAt(cont-1).add(new ListaTareas(riesgoT.getAmenaza(),riesgoT.getTratamiento()));
+                                        vecDias.elementAt(cont-1).add(new ListaTareas(riesgoT.getAmenaza(),riesgoT.getTratamiento(),"R",0));
                                     else{
                                         ArrayList tempAL = new ArrayList();
-                                        tempAL.add(new ListaTareas(riesgoT.getAmenaza(),riesgoT.getTratamiento()));
+                                        tempAL.add(new ListaTareas(riesgoT.getAmenaza(),riesgoT.getTratamiento(),"R",0));
                                         vecDias.insertElementAt(tempAL,cont-1);
                                     }
                                         
@@ -430,23 +452,25 @@ public class Calendario implements Pestana {
                             String f1,f2;
                             f1 = formatoFecha.format(fecha);
                             f2 = formatoFecha.format(tempDate);
-                            if(cont==8)
-                            f2 = "08-12-2013";
+                            if(cont==9)
+                            f2 = "09-12-2013";
                 
                             if(f1.equals(f2)){
                                 try {
                                     ArrayList tempL = planT.getTareasARealizar();                            
                                     Iterator iterador2 = tempL.iterator();
+                                    int contaIte =0;
                                     while(iterador2.hasNext()){
                                         Tarea t1 = (Tarea)iterador2.next();
                                         //vecDias.insertElementAt(tempL,cont-1);   
                                         if(vecDias.elementAt(cont-1) != null)
-                                            vecDias.elementAt(cont-1).add(new ListaTareas(t1.getNombre(),t1.getDescripcion()));
+                                            vecDias.elementAt(cont-1).add(new ListaTareas(t1.getNombre(),t1.getDescripcion(),"P",contaIte));
                                         else{
                                             ArrayList tempAL = new ArrayList();
-                                            tempAL.add(new ListaTareas(t1.getNombre(),t1.getDescripcion()));
+                                            tempAL.add(new ListaTareas(t1.getNombre(),t1.getDescripcion(),"P",contaIte));
                                             vecDias.insertElementAt(tempAL,cont-1);
                                         }
+                                        contaIte++;
                                     }                                                                        
                                                                         
                                     BufferedImage check = ImageIO.read(new File("gCheck.png"));
@@ -480,14 +504,20 @@ public class Calendario implements Pestana {
 class ListaTareas{
     String nombre;
     String descripcion;
+    String tipo;
+    int indice;
     
-    ListaTareas(String a, String b){
+    ListaTareas(String a, String b, String c,int d){
         nombre = a;
         descripcion=b;        
+        tipo=c;
+        indice=d;
     }
     
     ListaTareas(){
         nombre = "";
         descripcion = "";
+        tipo = "";
+        indice=-1;
     }
 }
