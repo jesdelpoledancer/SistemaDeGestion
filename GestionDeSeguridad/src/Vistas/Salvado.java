@@ -1,13 +1,37 @@
 package Vistas;
 
+import Controladores.Mediator;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Itzcoatl90
  */
 public class Salvado extends javax.swing.JFrame {
 
+    Mediator m;
     public Salvado() {
         initComponents();
+    }
+    
+    public void setMediator(Mediator m){
+        this.m = m;
+        try {
+            BufferedImage db = ImageIO.read(new File("MEMENTO.png"));
+            JLabel memento = new JLabel(new ImageIcon(db));
+            memento.setBounds(0,0,400,484);
+            this.add(memento);
+        } catch (IOException ex) {
+            Logger.getLogger(Salvado.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -24,7 +48,7 @@ public class Salvado extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 484, Short.MAX_VALUE)
         );
 
         pack();

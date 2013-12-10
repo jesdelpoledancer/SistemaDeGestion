@@ -16,6 +16,7 @@ public class Control {
     private Date proximoMonitoreo;//6
     private ArrayList tareasARealizar;//7 (para agregar una tarea) y 9 (para quitar una tarea)
     private int costoDeAdquisicion;
+    private String tipoDeControl;//Preventivo, Operativo, Detectivo, Reactivo, Garantía
 
     public ArrayList getRiesgosAsociados() {
         return riesgosAsociados;

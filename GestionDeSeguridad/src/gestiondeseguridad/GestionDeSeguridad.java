@@ -8,6 +8,7 @@ import Modelos.LectorEscritorDeEntidades;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.JFrame;
 
 /**
  *
@@ -16,6 +17,7 @@ import java.util.Date;
 public class GestionDeSeguridad {
 
     public static void main(String[] args) {
+        JFrame.setDefaultLookAndFeelDecorated(true);
         Mediator m = new Mediator();
     }
     

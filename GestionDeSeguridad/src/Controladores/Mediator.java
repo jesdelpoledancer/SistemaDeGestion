@@ -23,12 +23,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 
 /**
  *
  * @author Itzcoatl90
  */
 public class Mediator {
+    
+    //Auxiliador para el invokeLater
+    private Mediator apuntador;
     
     //Controladores hermanos
     Escritura Control_escritura;
@@ -48,6 +53,7 @@ public class Mediator {
     Vistas.Perfil Vista_perfil;
     Menu Vista_menu;
     Login Vista_login;
+    Vistas.Salvado Vista_Memento;
     
     //Perfiles
     PerfilDeActivo ACTIVO;
@@ -58,10 +64,16 @@ public class Mediator {
     Politica POLITICA;
     
     public Mediator(){
-        Control_escritura = new Escritura();
-        Vista_login  = new Login();
-        Vista_login.setMediator(this);
-        Vista_login.setVisible(true);
+        apuntador = this;
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                SubstanceLookAndFeel.setSkin("org.pushingpixels.substance.api.skin.MagellanSkin");
+                Control_escritura = new Escritura();
+                Vista_login  = new Login();
+                Vista_login.setMediator(apuntador);
+                Vista_login.setVisible(true);
+            }
+          });
     }
     
     public void autenticar(String login, String password){
@@ -83,8 +95,10 @@ public class Mediator {
             //Vistas
             Vista_perfil = new Vistas.Perfil();
             Vista_menu = new Menu();
+            Vista_Memento = new Vistas.Salvado();
             Vista_perfil.setMediator(this);
             Vista_menu.setMediator(this);
+            Vista_Memento.setMediator(this);
             
             //Procedimiento
             Control_escritura.leerDatos();
@@ -107,6 +121,10 @@ public class Mediator {
     
     public void changePanel(int indice, JPanel panel){
         Vista_menu.setCalendario(indice,panel);
+    }
+    
+    public void mostrarMemento(){
+        Vista_Memento.setVisible(true);
     }
     
     public void mostrarPerfil(Object obj){
