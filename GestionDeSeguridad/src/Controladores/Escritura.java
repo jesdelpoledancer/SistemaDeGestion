@@ -264,6 +264,7 @@ public class Escritura {
         EntityDB.getInstance().agregarRiesgo(malware2);
         Control lblanca = new Control();
         lblanca.setNombre("Lista blanca de aplicacion");
+        lblanca.setCostoDeAdquisicion(1000);
         lblanca.setProximoMonitoreo(new Date(fecha5+86400000*2));
         lblanca.setTiempoDeMonitoreo(new Time(86400000*14));//Cada 14 días
         ArrayList tar = new ArrayList();
@@ -274,6 +275,7 @@ public class Escritura {
         lblanca.setRiesgosAsociados(riesgos);
         Control avirus = new Control();
         avirus.setNombre("Antivirus AVIRA");
+        avirus.setCostoDeAdquisicion(100);
         avirus.setProximoMonitoreo(new Date(fecha1+86400000*1));
         avirus.setTiempoDeMonitoreo(new Time(86400000*12));//Cada 12 días
         ArrayList tar2 = new ArrayList();
@@ -285,6 +287,7 @@ public class Escritura {
         avirus.setRiesgosAsociados(riesgos2);
         Control cifrad = new Control();
         cifrad.setNombre("Cifrado");
+        cifrad.setCostoDeAdquisicion(10000);
         cifrad.setProximoMonitoreo(new Date(fecha2+86400000*3));
         cifrad.setTiempoDeMonitoreo(new Time(86400000*17));//Cada 17 días
         ArrayList tar3 = new ArrayList();
@@ -308,11 +311,11 @@ public class Escritura {
         tareas.add(new Tarea("Levantar","Prender servicios críticos de respaldo"));
         sop.setTareasARealizar(tareas);
         ArrayList pol = new ArrayList();
-        pol.add("Politicas para aplicacion");
+        //pol.add("Politicas para aplicacion");
         pol.add("Politicas para servidores");
         pol.add("Politica para archivo en servidor");
         pol.add("Proceso de cifrado de archivos");
-        pol.add("Mision de seguridad");
+        //pol.add("Mision de seguridad");
         sop.setPoliticasQueSoporta(pol);
         EntityDB.getInstance().agregarPlanDeSoporte(sop);
         Rol directorTI = new Rol();

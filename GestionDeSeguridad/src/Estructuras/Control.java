@@ -15,6 +15,7 @@ public class Control {
     private Time tiempoDeMonitoreo;//5
     private Date proximoMonitoreo;//6
     private ArrayList tareasARealizar;//7 (para agregar una tarea) y 9 (para quitar una tarea)
+    private int costoDeAdquisicion;
 
     public ArrayList getRiesgosAsociados() {
         return riesgosAsociados;
@@ -54,6 +55,14 @@ public class Control {
 
     public void setTareasARealizar(ArrayList tareasARealizar) {
         this.tareasARealizar = tareasARealizar;
+    }
+
+    public int getCostoDeAdquisicion() {
+        return costoDeAdquisicion;
+    }
+
+    public void setCostoDeAdquisicion(int costoDeAdquisicion) {
+        this.costoDeAdquisicion = costoDeAdquisicion;
     }
     
 }

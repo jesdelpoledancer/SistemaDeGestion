@@ -68,7 +68,7 @@ public class Privilegios {
         
         
             
-        return true;
+        return false;
     }
     
     public boolean crear(Rol rol, Object obj){
@@ -95,7 +95,7 @@ public class Privilegios {
                 default:
                     break;
        }
-        return true;
+        return false;
     }
     
     public boolean eliminar(Rol rol, Object obj){
@@ -123,7 +123,7 @@ public class Privilegios {
                 default:
                     break;
        }
-        return true;
+        return false;
     }
     
     public boolean modificar(Rol rol, Object obj, int numeroAtributo){
@@ -152,7 +152,7 @@ public class Privilegios {
                     break;
        }
                     
-     return true;
+     return false;
     }
     
  

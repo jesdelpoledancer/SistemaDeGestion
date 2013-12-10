@@ -44,9 +44,9 @@ public class Organizacion implements Pestana {
     public void prepararPanel(){
         try {
             BufferedImage db = ImageIO.read(new File("ORGANIGRAMA.png"));
-            JLabel truquitoMagico = new JLabel(new ImageIcon(db));
-            organigrama.add(truquitoMagico);
-            truquitoMagico.addMouseListener(new java.awt.event.MouseListener() {
+            JLabel jerarquia = new JLabel(new ImageIcon(db));
+            organigrama.add(jerarquia);
+            jerarquia.addMouseListener(new java.awt.event.MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent me) {
                     int x = me.getX();
