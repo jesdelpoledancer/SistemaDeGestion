@@ -156,7 +156,46 @@ public class Calendario implements Pestana {
         JPanel[] diasArray = new JPanel[38];        
         JLabel dias = new JLabel("Dom       Lun        Mar         Mie         Jue          Vie        Sab   ");
         int x,y,cont,desp;
-        JLabel mesLabel = new JLabel("<html>D<br>I<br>C<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+        JLabel mesLabel = new JLabel();
+        switch(mes-1){
+            case 0:
+                mesLabel.setText("<html>E<br>N<br>E<br>R<br>O</html>");
+                break;
+           case 1:
+                mesLabel.setText("<html>F<br>E<br>B<br>R<br>E<br>R<br>O</html>");
+                break;
+           case 2:
+                mesLabel.setText("<html>M<br>A<br>R<br>Z<br>O</html>");
+                break;
+           case 3:
+                mesLabel.setText("<html>A<br>B<br>R<br>I<br>L</html>");
+                break;
+           case 4:
+                mesLabel.setText("<html>M<br>A<br>Y<br>O</html>");
+                break;
+           case 5:
+                mesLabel.setText("<html>J<br>U<br>N<br>I<br>O</html>");
+                break;
+           case 6:
+                mesLabel.setText("<html>J<br>U<br>L<br>I<br>O</html>");
+                break;
+           case 7:
+                mesLabel.setText("<html>A<br>G<br>O<br>S<br>T<br>O</html>");
+                break;
+           case 8:
+                mesLabel.setText("<html>S<br>E<br>P<br>T<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+                break;
+          case 9:
+                mesLabel.setText("<html>O<br>C<br>T<br>U<br>B<br>R<br>E</html>");
+                break;
+          case 10:
+                mesLabel.setText("<html>N<br>O<br>V<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+                break;
+          case 11:
+                mesLabel.setText("<html>D<br>I<br>C<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+                break;          
+        }
+        
         JLabel anioLabel = new JLabel(anio+"");
         JLabel anioSig = new JLabel();;
         JLabel anioAnt = new JLabel();
@@ -168,9 +207,9 @@ public class Calendario implements Pestana {
         anioSig.setText(">");
         anioAnt.setBounds(450,6,35,35);
         anioAnt.setText("<");
-        mesSig.setBounds(565,42,35,35);
+        mesSig.setBounds(555,42,35,35);
         mesSig.setText(">");
-        mesAnt.setBounds(10,42,35,35);
+        mesAnt.setBounds(40,42,35,35);
         mesAnt.setText("<");
         anioSig.setFont(new Font("Lucida Grande", 1, 35));
         anioAnt.setFont(new Font("Lucida Grande", 1, 35));
@@ -378,6 +417,28 @@ public class Calendario implements Pestana {
             }
             if(componente.getName().equals("anioAnt")){
                calenda.set(Calendar.YEAR,calenda.get(Calendar.YEAR)-1);            
+               prepararPanel(calenda.getTime());                        
+            }
+            if(componente.getName().equals("mesSig")){
+                int mes = calenda.get(Calendar.MONTH);
+                
+                if(mes == 12){ 
+                    calenda.set(Calendar.MONTH,0);
+                    calenda.set(Calendar.YEAR,calenda.get(Calendar.YEAR)+1);      
+                }else
+                    calenda.set(Calendar.MONTH,mes+1);
+                    
+               prepararPanel(calenda.getTime());                        
+            }
+            if(componente.getName().equals("mesAnt")){
+                int mes = calenda.get(Calendar.MONTH);
+                
+                if(mes == 0){ 
+                    calenda.set(Calendar.MONTH,11);
+                    calenda.set(Calendar.YEAR,calenda.get(Calendar.YEAR)-1);      
+                }else
+                    calenda.set(Calendar.MONTH,mes-1);
+                    
                prepararPanel(calenda.getTime());                        
             }
         
@@ -590,7 +651,45 @@ public class Calendario implements Pestana {
         JPanel[] diasArray = new JPanel[38];        
         JLabel dias = new JLabel("Dom       Lun        Mar         Mie         Jue          Vie        Sab   ");
         int x,y,cont,desp;
-        JLabel mesLabel = new JLabel("<html>D<br>I<br>C<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+        JLabel mesLabel = new JLabel();
+        switch(mes-1){
+            case 0:
+                mesLabel.setText("<html>E<br>N<br>E<br>R<br>O</html>");
+                break;
+           case 1:
+                mesLabel.setText("<html>F<br>E<br>B<br>R<br>E<br>R<br>O</html>");
+                break;
+           case 2:
+                mesLabel.setText("<html>M<br>A<br>R<br>Z<br>O</html>");
+                break;
+           case 3:
+                mesLabel.setText("<html>A<br>B<br>R<br>I<br>L</html>");
+                break;
+           case 4:
+                mesLabel.setText("<html>M<br>A<br>Y<br>O</html>");
+                break;
+           case 5:
+                mesLabel.setText("<html>J<br>U<br>N<br>I<br>O</html>");
+                break;
+           case 6:
+                mesLabel.setText("<html>J<br>U<br>L<br>I<br>O</html>");
+                break;
+           case 7:
+                mesLabel.setText("<html>A<br>G<br>O<br>S<br>T<br>O</html>");
+                break;
+           case 8:
+                mesLabel.setText("<html>S<br>E<br>P<br>T<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+                break;
+          case 9:
+                mesLabel.setText("<html>O<br>C<br>T<br>U<br>B<br>R<br>E</html>");
+                break;
+          case 10:
+                mesLabel.setText("<html>N<br>O<br>V<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+                break;
+          case 11:
+                mesLabel.setText("<html>D<br>I<br>C<br>I<br>E<br>M<br>B<br>R<br>E</html>");
+                break;          
+        }
         JLabel anioLabel = new JLabel(anio+"");
         JLabel anioSig = new JLabel();;
         JLabel anioAnt = new JLabel();
@@ -602,9 +701,9 @@ public class Calendario implements Pestana {
         anioSig.setText(">");
         anioAnt.setBounds(450,6,35,35);
         anioAnt.setText("<");
-        mesSig.setBounds(565,42,35,35);
+        mesSig.setBounds(555,42,35,35);
         mesSig.setText(">");
-        mesAnt.setBounds(10,42,35,35);
+        mesAnt.setBounds(40,42,35,35);
         mesAnt.setText("<");
         anioSig.setFont(new Font("Lucida Grande", 1, 35));
         anioAnt.setFont(new Font("Lucida Grande", 1, 35));
