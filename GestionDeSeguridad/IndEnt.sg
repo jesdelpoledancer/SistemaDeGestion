@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entidades-indirectas ultimaActualizacion="11/12/2013 06:35:29 PM">
+<!--Este archivo contiene las entidades directas y sus atributos-->
+<!--Riesgos y Tareas-->
+<activos>
+<activo1>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo>2013-12-19</proximoMonitoreo>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo1>
+<activo2>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo>2013-12-27</proximoMonitoreo>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo2>
+<activo3>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo>2013-12-24</proximoMonitoreo>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo3>
+<activo4>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo4>
+<activo5>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo5>
+<activo6>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo6>
+<activo7>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo7>
+<activo8>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo8>
+<activo9>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo9>
+<activo10>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo10>
+<activo11>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo11>
+<activo12>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo12>
+<activo13>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo13>
+<activo14>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo14>
+<activo15>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo15>
+<activo16>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo16>
+<activo17>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo17>
+<activo18>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo18>
+<activo19>
+<nombre>Servidor</nombre>
+<costoModificacion>100000</costoModificacion>
+<costoInterrupcion>10000</costoInterrupcion>
+<costoRelevacion>Reputación</costoRelevacion>
+<tiempoMonitoreo>1728000000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Hackers</riesgo1>
+</riesgos>
+</activo19>
+<activo20>
+<nombre>Workstation 1</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-1098167296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo20>
+<activo21>
+<nombre>Workstation 2</nombre>
+<costoModificacion>1000</costoModificacion>
+<costoInterrupcion>500</costoInterrupcion>
+<costoRelevacion>1000</costoRelevacion>
+<tiempoMonitoreo>-925367296</tiempoMonitoreo>
+<proximoMonitoreo/>
+<riesgos>
+<riesgo1>Virus</riesgo1>
+<riesgo2>Malware</riesgo2>
+</riesgos>
+</activo21>
+</activos>
+<planesDeSoporte>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo>2013-12-25</proximoMonitoreo>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas>
+<politica1>Politicas para servidores</politica1>
+<politica2>Politica para archivo en servidor</politica2>
+<politica3>Proceso de cifrado de archivos</politica3>
+</politicasSoportadas>
+</plan1>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas/>
+</plan1>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas/>
+</plan1>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas/>
+</plan1>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas/>
+</plan1>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas/>
+</plan1>
+<plan1>
+<nombre>Plan de Contingencia</nombre>
+<descripcion>Es el plan de contingencia para los servicios digitales</descripcion>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revision</nombre>
+<descripcion>Revisar origen del problema</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Aislamiento</nombre>
+<descripcion>Aislarlo</descripcion>
+</tarea2>
+<tarea3>
+<nombre>Respaldo</nombre>
+<descripcion>Cambiar a energias alternativas y respaldos de recursos</descripcion>
+</tarea3>
+<tarea4>
+<nombre>Levantar</nombre>
+<descripcion>Prender servicios críticos de respaldo</descripcion>
+</tarea4>
+</tareas>
+<politicasSoportadas/>
+</plan1>
+</planesDeSoporte>
+<controles>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo>2013-12-12</proximoMonitoreo>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados>
+<riesgo1>Hackers</riesgo1>
+</riesgosAociados>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo>2013-12-21</proximoMonitoreo>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados>
+<riesgo1>Malware</riesgo1>
+</riesgosAociados>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo>2013-12-21</proximoMonitoreo>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados>
+<riesgo1>Virus</riesgo1>
+</riesgosAociados>
+</control1>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Cifrado</nombre>
+<tiempoMonitoreo>1468800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Revisar algoritmo</nombre>
+<descripcion>Verificar que el algoritmo utilizado siga siendo fuerte y no roto</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Lista blanca de aplicacion</nombre>
+<tiempoMonitoreo>1209600000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Lista blanca Actualizar</nombre>
+<descripcion>Se debe actualizar la base de datos de aplicaciones permitidas y revisar integridad de lista</descripcion>
+</tarea1>
+</tareas>
+<riesgosAociados/>
+</control1>
+<control1>
+<nombre>Antivirus AVIRA</nombre>
+<tiempoMonitoreo>1036800000</tiempoMonitoreo>
+<proximoMonitoreo/>
+<tareas>
+<tarea1>
+<nombre>Actualizar base de datos de virus</nombre>
+<descripcion>Se debe actualizar la base de datos de virus</descripcion>
+</tarea1>
+<tarea2>
+<nombre>Analizar equipos</nombre>
+<descripcion>Se debe hacer un escaneo de virus en todo los equipos</descripcion>
+</tarea2>
+</tareas>
+<riesgosAociados/>
+</control1>
+</controles>
+</entidades-indirectas>

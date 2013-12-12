@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<arbol-de-procesos ultimaActualizacion="11/12/2013 06:35:29 PM">
+<!--Este archivo contiene la estructura de procesos partiendo de la mision-->
+<mision>
+<nombre>Mision de seguridad</nombre>
+<descripcion>Proveer a nuestros clientes de los servicios del compilador para el pseudo-lenguaje de programación LaTeX, así como diversos tipos de templates, junto con espacio de almacenamiento para sus documentos científicos ofreciéndole al mismo un alto grado de confidencialidad,  integridad, disponibilidad y rápido acceso para sus documentos desde cualquier parte del mundo en donde existan servicios de Internet.</descripcion>
+<proximoMonitoreo>1387238400000</proximoMonitoreo>
+<estado>Vigente</estado>
+<controles>
+<control1>Lista blanca de aplicacion</control1>
+<control2>Antivirus AVIRA</control2>
+<control3>Cifrado</control3>
+</controles>
+<activos>
+<activo1>Servidor</activo1>
+<activo2>Workstation 1</activo2>
+<activo3>Workstation 2</activo3>
+</activos>
+<responsable>Director de TI</responsable>
+<politicas>
+<politica1>Politicas para aplicacion</politica1>
+<politica2>Politicas para servidores</politica2>
+</politicas>
+</mision>
+<politica>
+<nombre>Politicas para aplicacion</nombre>
+<descripcion>Las aplicaciones deberán ser seguras.</descripcion>
+<proximoMonitoreo>1387929600000</proximoMonitoreo>
+<estado>Evaluación</estado>
+<controles>
+<control1>Lista blanca de aplicacion</control1>
+<control2>Antivirus AVIRA</control2>
+</controles>
+<activos>
+<activo1>Workstation 1</activo1>
+<activo2>Workstation 2</activo2>
+</activos>
+<responsable>Director Operativo</responsable>
+<politicaPadre>Mision de seguridad</politicaPadre>
+</politica>
+<politica>
+<nombre>Politicas para servidores</nombre>
+<descripcion>Los servidores deberán ofrecer cierto grado de confidencialidad.</descripcion>
+<proximoMonitoreo>1387584000000</proximoMonitoreo>
+<estado>Vigente</estado>
+<controles>
+<control1>Cifrado</control1>
+</controles>
+<activos>
+<activo1>Servidor</activo1>
+</activos>
+<responsable>Subdirector de auditoría</responsable>
+<politicaPadre>Mision de seguridad</politicaPadre>
+</politica>
+</arbol-de-procesos>
